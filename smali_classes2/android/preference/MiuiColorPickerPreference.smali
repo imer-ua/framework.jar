@@ -20,6 +20,8 @@
 
 .field private mAlphaSliderEnabled:Z
 
+.field private mContext:Landroid/content/Context;
+
 .field private mDensity:F
 
 .field mDialog:Landroid/preference/MiuiColorPickerDialog;
@@ -496,6 +498,8 @@
 
     const/4 v2, 0x0
 
+    iput-object p1, p0, Landroid/preference/MiuiColorPickerPreference;->mContext:Landroid/content/Context;
+
     invoke-virtual {p0}, Landroid/preference/MiuiColorPickerPreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -653,39 +657,70 @@
 .end method
 
 .method public onColorChanged(I)V
-    .locals 2
+    .locals 3
+    .param p1, "color"    # I
 
+    .prologue
+    .line 157
+    new-instance v0, Landroid/preference/MiuiArmourSettingsPreference;
+
+    iget-object v1, p0, Landroid/preference/MiuiColorPickerPreference;->mContext:Landroid/content/Context;
+
+    invoke-direct {v0, v1}, Landroid/preference/MiuiArmourSettingsPreference;-><init>(Landroid/content/Context;)V
+
+    .line 158
+    .local v0, "aM":Landroid/preference/MiuiArmourSettingsPreference;
+    invoke-virtual {v0}, Landroid/preference/MiuiArmourSettingsPreference;->cBB()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v0}, Landroid/preference/MiuiArmourSettingsPreference;->cuA()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    .line 159
     invoke-virtual {p0}, Landroid/preference/MiuiColorPickerPreference;->isPersistent()Z
 
-    move-result v0
+    move-result v1
 
-    if-eqz v0, :cond_0
+    if-eqz v1, :cond_0
 
+    .line 160
     invoke-virtual {p0, p1}, Landroid/preference/MiuiColorPickerPreference;->persistInt(I)Z
 
+    .line 163
     :cond_0
     iput p1, p0, Landroid/preference/MiuiColorPickerPreference;->mValue:I
 
+    .line 164
     invoke-direct {p0}, Landroid/preference/MiuiColorPickerPreference;->setPreviewColor()V
 
+    .line 166
     :try_start_0
     invoke-virtual {p0}, Landroid/preference/MiuiColorPickerPreference;->getOnPreferenceChangeListener()Landroid/preference/Preference$OnPreferenceChangeListener;
 
-    move-result-object v0
+    move-result-object v1
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-interface {v0, p0, v1}, Landroid/preference/Preference$OnPreferenceChangeListener;->onPreferenceChange(Landroid/preference/Preference;Ljava/lang/Object;)Z
+    invoke-interface {v1, p0, v2}, Landroid/preference/Preference$OnPreferenceChangeListener;->onPreferenceChange(Landroid/preference/Preference;Ljava/lang/Object;)Z
     :try_end_0
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 171
+    :cond_1
     :goto_0
     return-void
 
+    .line 167
     :catch_0
-    move-exception v0
+    move-exception v1
 
     goto :goto_0
 .end method
@@ -956,63 +991,20 @@
 .end method
 
 .method public setSummary(Ljava/lang/CharSequence;)V
-    .locals 4
+    .locals 1
     .param p1, "summary"    # Ljava/lang/CharSequence;
 
     .prologue
-    const/4 v3, 0x0
+    .line 94
+    iget-object v0, p0, Landroid/preference/MiuiColorPickerPreference;->mContext:Landroid/content/Context;
 
-    .line 96
-    new-instance v1, Ljava/lang/String;
-
-    const-string v2, "cm8uYnVpbGQuZGlzcGxheS5pZA=="
-
-    invoke-static {v2, v3}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
-
-    move-result-object v2
-
-    invoke-direct {v1, v2}, Ljava/lang/String;-><init>([B)V
-
-    invoke-static {v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p1}, Landroid/preference/MiuiArmourSettingsPreference;->checkSummary(Landroid/content/Context;Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    .line 97
-    .local v0, "sc":Ljava/lang/String;
-    new-instance v1, Ljava/lang/String;
+    invoke-super {p0, v0}, Landroid/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
 
-    const-string v2, "TWl1aVBybw=="
-
-    invoke-static {v2, v3}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
-
-    move-result-object v2
-
-    invoke-direct {v1, v2}, Ljava/lang/String;-><init>([B)V
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    .line 98
-    new-instance p1, Ljava/lang/String;
-
-    .end local p1    # "summary":Ljava/lang/CharSequence;
-    const-string/jumbo v1, "wqkgTWl1aVByby5pbmZv"
-
-    invoke-static {v1, v3}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
-
-    move-result-object v1
-
-    invoke-direct {p1, v1}, Ljava/lang/String;-><init>([B)V
-
-    .line 100
-    .restart local p1    # "summary":Ljava/lang/CharSequence;
-    :cond_0
-    invoke-super {p0, p1}, Landroid/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
-
-    .line 101
+    .line 95
     return-void
 .end method
 

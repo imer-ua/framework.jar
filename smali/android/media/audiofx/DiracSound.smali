@@ -12,6 +12,14 @@
 
 .field public static final DIRACSOUND_HEADSET_EM013:I = 0x13
 
+.field public static final DIRACSOUND_HEADSET_EM015:I = 0x14
+
+.field public static final DIRACSOUND_HEADSET_EM017:I = 0x15
+
+.field public static final DIRACSOUND_HEADSET_EM018:I = 0x16
+
+.field public static final DIRACSOUND_HEADSET_EM019:I = 0x17
+
 .field public static final DIRACSOUND_HEADSET_EM303:I = 0xd
 
 .field public static final DIRACSOUND_HEADSET_EM304:I = 0xe
@@ -100,14 +108,14 @@
     .param p2, "audioSession"    # I
 
     .prologue
-    .line 61
+    .line 65
     sget-object v0, Landroid/media/audiofx/DiracSound;->EFFECT_TYPE_NULL:Ljava/util/UUID;
 
     sget-object v1, Landroid/media/audiofx/DiracSound;->EFFECT_TYPE_DIRACSOUND:Ljava/util/UUID;
 
     invoke-direct {p0, v0, v1, p1, p2}, Landroid/media/audiofx/AudioEffect;-><init>(Ljava/util/UUID;Ljava/util/UUID;II)V
 
-    .line 60
+    .line 64
     return-void
 .end method
 
@@ -124,16 +132,16 @@
     .end annotation
 
     .prologue
-    .line 123
+    .line 127
     const/4 v0, 0x1
 
-    .line 124
+    .line 128
     .local v0, "param":I
     const/4 v2, 0x1
 
     new-array v1, v2, [I
 
-    .line 126
+    .line 130
     .local v1, "value":[I
     invoke-virtual {p0, v0, v1}, Landroid/media/audiofx/AudioEffect;->getParameter(I[I)I
 
@@ -141,7 +149,7 @@
 
     invoke-virtual {p0, v2}, Landroid/media/audiofx/AudioEffect;->checkStatus(I)V
 
-    .line 128
+    .line 132
     const/4 v2, 0x0
 
     aget v2, v1, v2
@@ -163,43 +171,43 @@
     .prologue
     const/4 v5, 0x2
 
-    .line 144
+    .line 148
     const/4 v0, 0x0
 
-    .line 145
+    .line 149
     .local v0, "level":F
     new-array v2, v5, [I
 
-    .line 146
+    .line 150
     .local v2, "param":[I
     const/16 v4, 0xa
 
     new-array v3, v4, [B
 
-    .line 148
+    .line 152
     .local v3, "value":[B
     const/4 v4, 0x0
 
     aput v5, v2, v4
 
-    .line 149
+    .line 153
     const/4 v4, 0x1
 
     aput p1, v2, v4
 
-    .line 150
+    .line 154
     invoke-virtual {p0, v2, v3}, Landroid/media/audiofx/AudioEffect;->getParameter([I[B)I
 
     move-result v4
 
     invoke-virtual {p0, v4}, Landroid/media/audiofx/AudioEffect;->checkStatus(I)V
 
-    .line 152
+    .line 156
     new-instance v1, Ljava/lang/String;
 
     invoke-direct {v1, v3}, Ljava/lang/String;-><init>([B)V
 
-    .line 153
+    .line 157
     .local v1, "levelStr":Ljava/lang/String;
     new-instance v4, Ljava/lang/Float;
 
@@ -209,7 +217,7 @@
 
     move-result v0
 
-    .line 155
+    .line 159
     return v0
 .end method
 
@@ -224,16 +232,16 @@
     .end annotation
 
     .prologue
-    .line 73
+    .line 77
     const/4 v0, 0x3
 
-    .line 74
+    .line 78
     .local v0, "param":I
     const/4 v2, 0x1
 
     new-array v1, v2, [I
 
-    .line 76
+    .line 80
     .local v1, "value":[I
     invoke-virtual {p0, v0, v1}, Landroid/media/audiofx/AudioEffect;->getParameter(I[I)I
 
@@ -241,7 +249,7 @@
 
     invoke-virtual {p0, v2}, Landroid/media/audiofx/AudioEffect;->checkStatus(I)V
 
-    .line 78
+    .line 82
     const/4 v2, 0x0
 
     aget v2, v1, v2
@@ -260,16 +268,16 @@
     .end annotation
 
     .prologue
-    .line 107
+    .line 111
     const/4 v0, 0x5
 
-    .line 108
+    .line 112
     .local v0, "param":I
     const/4 v2, 0x1
 
     new-array v1, v2, [I
 
-    .line 110
+    .line 114
     .local v1, "value":[I
     invoke-virtual {p0, v0, v1}, Landroid/media/audiofx/AudioEffect;->getParameter(I[I)I
 
@@ -277,7 +285,7 @@
 
     invoke-virtual {p0, v2}, Landroid/media/audiofx/AudioEffect;->checkStatus(I)V
 
-    .line 112
+    .line 116
     const/4 v2, 0x0
 
     aget v2, v1, v2
@@ -296,16 +304,16 @@
     .end annotation
 
     .prologue
-    .line 167
+    .line 171
     const/4 v0, 0x7
 
-    .line 168
+    .line 172
     .local v0, "param":I
     const/4 v2, 0x1
 
     new-array v1, v2, [I
 
-    .line 170
+    .line 174
     .local v1, "value":[I
     invoke-virtual {p0, v0, v1}, Landroid/media/audiofx/AudioEffect;->getParameter(I[I)I
 
@@ -313,7 +321,7 @@
 
     invoke-virtual {p0, v2}, Landroid/media/audiofx/AudioEffect;->checkStatus(I)V
 
-    .line 172
+    .line 176
     const/4 v2, 0x0
 
     aget v2, v1, v2
@@ -332,16 +340,16 @@
     .end annotation
 
     .prologue
-    .line 90
+    .line 94
     const/4 v0, 0x4
 
-    .line 91
+    .line 95
     .local v0, "param":I
     const/4 v2, 0x1
 
     new-array v1, v2, [I
 
-    .line 93
+    .line 97
     .local v1, "value":[I
     invoke-virtual {p0, v0, v1}, Landroid/media/audiofx/AudioEffect;->getParameter(I[I)I
 
@@ -349,7 +357,7 @@
 
     invoke-virtual {p0, v2}, Landroid/media/audiofx/AudioEffect;->checkStatus(I)V
 
-    .line 95
+    .line 99
     const/4 v2, 0x0
 
     aget v2, v1, v2
@@ -368,16 +376,16 @@
     .end annotation
 
     .prologue
-    .line 184
+    .line 188
     const/16 v0, 0x9
 
-    .line 185
+    .line 189
     .local v0, "param":I
     const/4 v2, 0x1
 
     new-array v1, v2, [I
 
-    .line 187
+    .line 191
     .local v1, "value":[I
     invoke-virtual {p0, v0, v1}, Landroid/media/audiofx/AudioEffect;->getParameter(I[I)I
 
@@ -385,7 +393,7 @@
 
     invoke-virtual {p0, v2}, Landroid/media/audiofx/AudioEffect;->checkStatus(I)V
 
-    .line 189
+    .line 193
     const/4 v2, 0x0
 
     aget v2, v1, v2
@@ -405,10 +413,10 @@
     .end annotation
 
     .prologue
-    .line 117
+    .line 121
     const/4 v0, 0x1
 
-    .line 118
+    .line 122
     .local v0, "param":I
     invoke-virtual {p0, v0, p1}, Landroid/media/audiofx/AudioEffect;->setParameter(II)I
 
@@ -416,7 +424,7 @@
 
     invoke-virtual {p0, v1}, Landroid/media/audiofx/AudioEffect;->checkStatus(I)V
 
-    .line 116
+    .line 120
     return-void
 .end method
 
@@ -432,10 +440,10 @@
     .end annotation
 
     .prologue
-    .line 194
+    .line 198
     const/16 v0, 0x8
 
-    .line 196
+    .line 200
     .local v0, "param":I
     invoke-virtual {p0, v0, p1}, Landroid/media/audiofx/AudioEffect;->setParameter(II)I
 
@@ -443,7 +451,7 @@
 
     invoke-virtual {p0, v1}, Landroid/media/audiofx/AudioEffect;->checkStatus(I)V
 
-    .line 193
+    .line 197
     return-void
 .end method
 
@@ -462,32 +470,32 @@
     .prologue
     const/4 v4, 0x2
 
-    .line 133
+    .line 137
     new-array v1, v4, [I
 
-    .line 135
+    .line 139
     .local v1, "param":[I
     const/4 v3, 0x0
 
     aput v4, v1, v3
 
-    .line 136
+    .line 140
     const/4 v3, 0x1
 
     aput p1, v1, v3
 
-    .line 137
+    .line 141
     invoke-static {p2}, Ljava/lang/String;->valueOf(F)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 138
+    .line 142
     .local v0, "levelStr":Ljava/lang/String;
     invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v2
 
-    .line 139
+    .line 143
     .local v2, "value":[B
     invoke-virtual {p0, v1, v2}, Landroid/media/audiofx/AudioEffect;->setParameter([I[B)I
 
@@ -495,7 +503,7 @@
 
     invoke-virtual {p0, v3}, Landroid/media/audiofx/AudioEffect;->checkStatus(I)V
 
-    .line 132
+    .line 136
     return-void
 .end method
 
@@ -511,10 +519,10 @@
     .end annotation
 
     .prologue
-    .line 66
+    .line 70
     const/4 v0, 0x3
 
-    .line 68
+    .line 72
     .local v0, "param":I
     invoke-virtual {p0, v0, p1}, Landroid/media/audiofx/AudioEffect;->setParameter(II)I
 
@@ -522,7 +530,7 @@
 
     invoke-virtual {p0, v1}, Landroid/media/audiofx/AudioEffect;->checkStatus(I)V
 
-    .line 65
+    .line 69
     return-void
 .end method
 
@@ -538,10 +546,10 @@
     .end annotation
 
     .prologue
-    .line 100
+    .line 104
     const/4 v0, 0x5
 
-    .line 102
+    .line 106
     .local v0, "param":I
     invoke-virtual {p0, v0, p1}, Landroid/media/audiofx/AudioEffect;->setParameter(II)I
 
@@ -549,7 +557,7 @@
 
     invoke-virtual {p0, v1}, Landroid/media/audiofx/AudioEffect;->checkStatus(I)V
 
-    .line 99
+    .line 103
     return-void
 .end method
 
@@ -565,10 +573,10 @@
     .end annotation
 
     .prologue
-    .line 160
+    .line 164
     const/4 v0, 0x7
 
-    .line 162
+    .line 166
     .local v0, "param":I
     invoke-virtual {p0, v0, p1}, Landroid/media/audiofx/AudioEffect;->setParameter(II)I
 
@@ -576,7 +584,7 @@
 
     invoke-virtual {p0, v1}, Landroid/media/audiofx/AudioEffect;->checkStatus(I)V
 
-    .line 159
+    .line 163
     return-void
 .end method
 
@@ -592,10 +600,10 @@
     .end annotation
 
     .prologue
-    .line 83
+    .line 87
     const/4 v0, 0x4
 
-    .line 85
+    .line 89
     .local v0, "param":I
     invoke-virtual {p0, v0, p1}, Landroid/media/audiofx/AudioEffect;->setParameter(II)I
 
@@ -603,7 +611,7 @@
 
     invoke-virtual {p0, v1}, Landroid/media/audiofx/AudioEffect;->checkStatus(I)V
 
-    .line 82
+    .line 86
     return-void
 .end method
 
@@ -619,10 +627,10 @@
     .end annotation
 
     .prologue
-    .line 177
+    .line 181
     const/16 v0, 0x9
 
-    .line 179
+    .line 183
     .local v0, "param":I
     invoke-virtual {p0, v0, p1}, Landroid/media/audiofx/AudioEffect;->setParameter(II)I
 
@@ -630,6 +638,6 @@
 
     invoke-virtual {p0, v1}, Landroid/media/audiofx/AudioEffect;->checkStatus(I)V
 
-    .line 176
+    .line 180
     return-void
 .end method

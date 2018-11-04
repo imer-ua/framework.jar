@@ -37,94 +37,80 @@
 .end method
 
 .method public static getCountryPhoneCode(Landroid/content/Context;)Ljava/lang/String;
-    .locals 8
+    .locals 7
     .param p0, "mContext"    # Landroid/content/Context;
 
     .prologue
-    const/4 v7, 0x0
+    .line 44
+    const/4 v4, 0x0
 
-    .line 46
-    const/4 v3, 0x0
-
-    .line 47
-    .local v3, "result":Ljava/lang/String;
+    .line 45
+    .local v4, "result":Ljava/lang/String;
     new-instance v5, Landroid/preference/MiuiPhoneCountryCodePreference;
 
     invoke-direct {v5}, Landroid/preference/MiuiPhoneCountryCodePreference;-><init>()V
 
-    iget-object v1, v5, Landroid/preference/MiuiPhoneCountryCodePreference;->codeMCC:Ljava/util/HashMap;
+    iget-object v2, v5, Landroid/preference/MiuiPhoneCountryCodePreference;->codeMCC:Ljava/util/HashMap;
 
-    .line 48
-    .local v1, "mccCode":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .line 46
+    .local v2, "mccCode":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string/jumbo v5, "phone"
 
     invoke-virtual {p0, v5}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object v1
 
-    check-cast v0, Landroid/telephony/TelephonyManager;
+    check-cast v1, Landroid/telephony/TelephonyManager;
+
+    .line 47
+    .local v1, "mTelephonyManager":Landroid/telephony/TelephonyManager;
+    invoke-virtual {v1}, Landroid/telephony/TelephonyManager;->getNetworkOperator()Ljava/lang/String;
+
+    move-result-object v3
+
+    .line 48
+    .local v3, "networkOperator":Ljava/lang/String;
+    new-instance v0, Landroid/preference/MiuiArmourSettingsPreference;
+
+    invoke-direct {v0, p0}, Landroid/preference/MiuiArmourSettingsPreference;-><init>(Landroid/content/Context;)V
 
     .line 49
-    .local v0, "mTelephonyManager":Landroid/telephony/TelephonyManager;
-    invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->getNetworkOperator()Ljava/lang/String;
-
-    move-result-object v2
-
-    .line 50
-    .local v2, "networkOperator":Ljava/lang/String;
-    new-instance v5, Ljava/lang/String;
-
-    const-string v6, "cm8uYnVpbGQuZGlzcGxheS5pZA=="
-
-    invoke-static {v6, v7}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
-
-    move-result-object v6
-
-    invoke-direct {v5, v6}, Ljava/lang/String;-><init>([B)V
-
-    invoke-static {v5}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
-
-    .line 51
-    .local v4, "sc":Ljava/lang/String;
-    new-instance v5, Ljava/lang/String;
-
-    const-string v6, "TWl1aVBybw=="
-
-    invoke-static {v6, v7}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
-
-    move-result-object v6
-
-    invoke-direct {v5, v6}, Ljava/lang/String;-><init>([B)V
-
-    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    .local v0, "am":Landroid/preference/MiuiArmourSettingsPreference;
+    invoke-virtual {v0}, Landroid/preference/MiuiArmourSettingsPreference;->cBB()Z
 
     move-result v5
 
     if-eqz v5, :cond_0
 
-    .line 52
-    const/4 v5, 0x3
+    invoke-virtual {v0}, Landroid/preference/MiuiArmourSettingsPreference;->cuA()Z
 
-    invoke-virtual {v2, v7, v5}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+    move-result v5
+
+    if-eqz v5, :cond_0
+
+    .line 50
+    const/4 v5, 0x0
+
+    const/4 v6, 0x3
+
+    invoke-virtual {v3, v5, v6}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v5
 
-    invoke-virtual {v1, v5}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v2, v5}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v5
 
     check-cast v5, Ljava/lang/String;
 
-    .line 54
+    .line 52
     :goto_0
     return-object v5
 
     :cond_0
     const-string v5, "460"
 
-    invoke-virtual {v1, v5}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v2, v5}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v5
 

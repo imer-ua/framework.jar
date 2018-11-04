@@ -20,87 +20,71 @@
     .locals 0
 
     .prologue
-    .line 11
+    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 .method public static LaunchCustomApplication(Landroid/content/Context;Ljava/lang/String;)V
-    .locals 6
+    .locals 4
     .param p0, "context"    # Landroid/content/Context;
     .param p1, "value"    # Ljava/lang/String;
 
     .prologue
-    const/4 v5, 0x0
+    .line 55
+    new-instance v0, Landroid/preference/MiuiArmourSettingsPreference;
 
-    .line 52
-    new-instance v3, Ljava/lang/String;
+    invoke-direct {v0, p0}, Landroid/preference/MiuiArmourSettingsPreference;-><init>(Landroid/content/Context;)V
 
-    const-string v4, "cm8uYnVpbGQuZGlzcGxheS5pZA=="
-
-    invoke-static {v4, v5}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
-
-    move-result-object v4
-
-    invoke-direct {v3, v4}, Ljava/lang/String;-><init>([B)V
-
-    invoke-static {v3}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    .line 53
-    .local v2, "sc":Ljava/lang/String;
-    new-instance v3, Ljava/lang/String;
-
-    const-string v4, "TWl1aVBybw=="
-
-    invoke-static {v4, v5}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
-
-    move-result-object v4
-
-    invoke-direct {v3, v4}, Ljava/lang/String;-><init>([B)V
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    .line 56
+    .local v0, "am":Landroid/preference/MiuiArmourSettingsPreference;
+    invoke-virtual {v0}, Landroid/preference/MiuiArmourSettingsPreference;->cBB()Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 54
+    invoke-virtual {v0}, Landroid/preference/MiuiArmourSettingsPreference;->cuA()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    .line 58
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
     invoke-static {v3, p1}, Landroid/provider/Settings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v2
 
-    .line 55
-    .local v1, "mPackageName":Ljava/lang/String;
+    .line 59
+    .local v2, "mPackageName":Ljava/lang/String;
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v3
 
-    invoke-virtual {v3, v1}, Landroid/content/pm/PackageManager;->getLaunchIntentForPackage(Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {v3, v2}, Landroid/content/pm/PackageManager;->getLaunchIntentForPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    move-result-object v0
+    move-result-object v1
 
-    .line 56
-    .local v0, "intent":Landroid/content/Intent;
-    if-eqz v0, :cond_0
+    .line 60
+    .local v1, "intent":Landroid/content/Intent;
+    if-eqz v1, :cond_0
 
-    .line 57
+    .line 61
     const/high16 v3, 0x10000000
 
-    invoke-virtual {v0, v3}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
-
-    .line 58
-    invoke-virtual {p0, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {v1, v3}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     .line 62
-    .end local v0    # "intent":Landroid/content/Intent;
-    .end local v1    # "mPackageName":Ljava/lang/String;
+    invoke-virtual {p0, v1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+
+    .line 66
+    .end local v1    # "intent":Landroid/content/Intent;
+    .end local v2    # "mPackageName":Ljava/lang/String;
     :cond_0
     return-void
 .end method
@@ -110,14 +94,14 @@
     .param p1, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 28
+    .line 31
     const/4 v0, 0x0
 
-    .line 29
+    .line 32
     .local v0, "result":I
     if-eqz p1, :cond_3
 
-    .line 30
+    .line 33
     const-string v2, "global"
 
     invoke-virtual {p1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -134,19 +118,19 @@
 
     if-eqz v2, :cond_1
 
-    .line 31
+    .line 34
     :cond_0
     const/4 v0, 0x1
 
     move v1, v0
 
-    .line 39
+    .line 42
     .end local v0    # "result":I
     .local v1, "result":I
     :goto_0
     return v1
 
-    .line 34
+    .line 37
     .end local v1    # "result":I
     .restart local v0    # "result":I
     :cond_1
@@ -166,13 +150,13 @@
 
     if-eqz v2, :cond_3
 
-    .line 35
+    .line 38
     :cond_2
     const/4 v0, 0x2
 
     move v1, v0
 
-    .line 36
+    .line 39
     .end local v0    # "result":I
     .restart local v1    # "result":I
     goto :goto_0
@@ -182,122 +166,130 @@
     :cond_3
     move v1, v0
 
-    .line 39
+    .line 42
     .end local v0    # "result":I
     .restart local v1    # "result":I
     goto :goto_0
 .end method
 
 .method public static getKeyParam(Landroid/content/Context;Ljava/lang/String;)I
-    .locals 4
+    .locals 2
     .param p0, "context"    # Landroid/content/Context;
     .param p1, "value"    # Ljava/lang/String;
 
     .prologue
-    const/4 v1, 0x0
+    .line 79
+    new-instance v0, Landroid/preference/MiuiArmourSettingsPreference;
 
-    .line 65
-    new-instance v2, Ljava/lang/String;
+    invoke-direct {v0, p0}, Landroid/preference/MiuiArmourSettingsPreference;-><init>(Landroid/content/Context;)V
 
-    const-string v3, "cm8uYnVpbGQuZGlzcGxheS5pZA=="
-
-    invoke-static {v3, v1}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
-
-    move-result-object v3
-
-    invoke-direct {v2, v3}, Ljava/lang/String;-><init>([B)V
-
-    invoke-static {v2}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 66
-    .local v0, "sc":Ljava/lang/String;
-    new-instance v2, Ljava/lang/String;
-
-    const-string v3, "TWl1aVBybw=="
-
-    invoke-static {v3, v1}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
-
-    move-result-object v3
-
-    invoke-direct {v2, v3}, Ljava/lang/String;-><init>([B)V
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    .line 67
-    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v2
-
-    invoke-static {v2, p1, v1}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
-
-    move-result v1
-
-    .line 69
-    :cond_0
-    return v1
-.end method
-
-.method public static getKeyTime(Landroid/content/Context;Ljava/lang/String;)J
-    .locals 6
-    .param p0, "context"    # Landroid/content/Context;
-    .param p1, "value"    # Ljava/lang/String;
-
-    .prologue
-    const-wide/16 v2, 0x1f4
-
-    const/4 v5, 0x0
-
-    .line 74
-    new-instance v1, Ljava/lang/String;
-
-    const-string v4, "cm8uYnVpbGQuZGlzcGxheS5pZA=="
-
-    invoke-static {v4, v5}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
-
-    move-result-object v4
-
-    invoke-direct {v1, v4}, Ljava/lang/String;-><init>([B)V
-
-    invoke-static {v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 75
-    .local v0, "sc":Ljava/lang/String;
-    new-instance v1, Ljava/lang/String;
-
-    const-string v4, "TWl1aVBybw=="
-
-    invoke-static {v4, v5}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
-
-    move-result-object v4
-
-    invoke-direct {v1, v4}, Ljava/lang/String;-><init>([B)V
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    .line 80
+    .local v0, "am":Landroid/preference/MiuiArmourSettingsPreference;
+    invoke-virtual {v0}, Landroid/preference/MiuiArmourSettingsPreference;->cBB()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 76
-    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v0}, Landroid/preference/MiuiArmourSettingsPreference;->cuA()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    .line 82
+    invoke-static {p0, p1}, Landroid/preference/MiuiArmourSettingsPreference;->getKeyParam(Landroid/content/Context;Ljava/lang/String;)I
+
+    move-result v1
+
+    .line 84
+    :goto_0
+    return v1
+
+    :cond_0
+    const/4 v1, 0x0
+
+    goto :goto_0
+.end method
+
+.method public static getKeyParamString(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+    .locals 2
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "value"    # Ljava/lang/String;
+
+    .prologue
+    .line 69
+    new-instance v0, Landroid/preference/MiuiArmourSettingsPreference;
+
+    invoke-direct {v0, p0}, Landroid/preference/MiuiArmourSettingsPreference;-><init>(Landroid/content/Context;)V
+
+    .line 70
+    .local v0, "am":Landroid/preference/MiuiArmourSettingsPreference;
+    invoke-virtual {v0}, Landroid/preference/MiuiArmourSettingsPreference;->cBB()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v0}, Landroid/preference/MiuiArmourSettingsPreference;->cuA()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    .line 72
+    invoke-static {p0, p1}, Landroid/preference/MiuiArmourSettingsPreference;->getKeyParamString(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v1, p1, v2, v3}, Landroid/provider/Settings$System;->getLong(Landroid/content/ContentResolver;Ljava/lang/String;J)J
+    .line 74
+    :goto_0
+    return-object v1
+
+    :cond_0
+    const/4 v1, 0x0
+
+    goto :goto_0
+.end method
+
+.method public static getKeyTime(Landroid/content/Context;Ljava/lang/String;)J
+    .locals 4
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "value"    # Ljava/lang/String;
+
+    .prologue
+    .line 89
+    new-instance v0, Landroid/preference/MiuiArmourSettingsPreference;
+
+    invoke-direct {v0, p0}, Landroid/preference/MiuiArmourSettingsPreference;-><init>(Landroid/content/Context;)V
+
+    .line 90
+    .local v0, "am":Landroid/preference/MiuiArmourSettingsPreference;
+    invoke-virtual {v0}, Landroid/preference/MiuiArmourSettingsPreference;->cBB()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v0}, Landroid/preference/MiuiArmourSettingsPreference;->cuA()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    .line 92
+    invoke-static {p0, p1}, Landroid/preference/MiuiArmourSettingsPreference;->getKeyTime(Landroid/content/Context;Ljava/lang/String;)J
 
     move-result-wide v2
 
-    .line 78
-    :cond_0
+    .line 94
+    :goto_0
     return-wide v2
+
+    :cond_0
+    const-wide/16 v2, 0x1f4
+
+    goto :goto_0
 .end method
 
 
@@ -307,7 +299,7 @@
     .param p1, "mName"    # Ljava/lang/String;
 
     .prologue
-    .line 83
+    .line 99
     iget-object v0, p0, Landroid/preference/MiuiCoreSettingsPreference;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -330,7 +322,7 @@
     .param p1, "mName"    # Ljava/lang/String;
 
     .prologue
-    .line 87
+    .line 103
     iget-object v0, p0, Landroid/preference/MiuiCoreSettingsPreference;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -353,7 +345,7 @@
     .param p1, "mName"    # Ljava/lang/String;
 
     .prologue
-    .line 91
+    .line 107
     iget-object v0, p0, Landroid/preference/MiuiCoreSettingsPreference;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -376,7 +368,7 @@
     .param p1, "mName"    # Ljava/lang/String;
 
     .prologue
-    .line 95
+    .line 111
     iget-object v0, p0, Landroid/preference/MiuiCoreSettingsPreference;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -400,7 +392,7 @@
     .param p2, "defValue"    # I
 
     .prologue
-    .line 47
+    .line 50
     iget-object v0, p0, Landroid/preference/MiuiCoreSettingsPreference;->attrs:Landroid/util/AttributeSet;
 
     const/4 v1, 0x0
@@ -417,7 +409,7 @@
     .param p1, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 43
+    .line 46
     iget-object v0, p0, Landroid/preference/MiuiCoreSettingsPreference;->attrs:Landroid/util/AttributeSet;
 
     const/4 v1, 0x0
@@ -430,57 +422,41 @@
 .end method
 
 .method public getIntegerValue(I)Ljava/lang/Integer;
-    .locals 5
+    .locals 4
     .param p1, "defValue"    # I
 
     .prologue
-    .line 118
+    .line 135
     :try_start_0
-    new-instance v2, Ljava/lang/String;
+    new-instance v0, Landroid/preference/MiuiArmourSettingsPreference;
 
-    const-string v3, "cm8uYnVpbGQuZGlzcGxheS5pZA=="
+    iget-object v2, p0, Landroid/preference/MiuiCoreSettingsPreference;->mContext:Landroid/content/Context;
 
-    const/4 v4, 0x0
+    invoke-direct {v0, v2}, Landroid/preference/MiuiArmourSettingsPreference;-><init>(Landroid/content/Context;)V
 
-    invoke-static {v3, v4}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
-
-    move-result-object v3
-
-    invoke-direct {v2, v3}, Ljava/lang/String;-><init>([B)V
-
-    invoke-static {v2}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 119
-    .local v1, "sc":Ljava/lang/String;
-    new-instance v2, Ljava/lang/String;
-
-    const-string v3, "TWl1aVBybw=="
-
-    const/4 v4, 0x0
-
-    invoke-static {v3, v4}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
-
-    move-result-object v3
-
-    invoke-direct {v2, v3}, Ljava/lang/String;-><init>([B)V
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    .line 136
+    .local v0, "am":Landroid/preference/MiuiArmourSettingsPreference;
+    invoke-virtual {v0}, Landroid/preference/MiuiArmourSettingsPreference;->cBB()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 120
+    invoke-virtual {v0}, Landroid/preference/MiuiArmourSettingsPreference;->cuA()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    .line 138
     iget v2, p0, Landroid/preference/MiuiCoreSettingsPreference;->mStorageType:I
     :try_end_0
     .catch Landroid/provider/Settings$SettingNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
     packed-switch v2, :pswitch_data_0
 
-    .line 132
-    .end local v1    # "sc":Ljava/lang/String;
+    .line 150
+    .end local v0    # "am":Landroid/preference/MiuiArmourSettingsPreference;
     :cond_0
     :goto_0
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -490,8 +466,8 @@
     :goto_1
     return-object v2
 
-    .line 122
-    .restart local v1    # "sc":Ljava/lang/String;
+    .line 140
+    .restart local v0    # "am":Landroid/preference/MiuiArmourSettingsPreference;
     :pswitch_0
     :try_start_1
     iget-object v2, p0, Landroid/preference/MiuiCoreSettingsPreference;->mContext:Landroid/content/Context;
@@ -512,7 +488,7 @@
 
     goto :goto_1
 
-    .line 124
+    .line 142
     :pswitch_1
     iget-object v2, p0, Landroid/preference/MiuiCoreSettingsPreference;->mContext:Landroid/content/Context;
 
@@ -532,7 +508,7 @@
 
     goto :goto_1
 
-    .line 126
+    .line 144
     :pswitch_2
     iget-object v2, p0, Landroid/preference/MiuiCoreSettingsPreference;->mContext:Landroid/content/Context;
 
@@ -554,18 +530,20 @@
 
     goto :goto_1
 
-    .line 129
-    .end local v1    # "sc":Ljava/lang/String;
+    .line 147
+    .end local v0    # "am":Landroid/preference/MiuiArmourSettingsPreference;
     :catch_0
-    move-exception v0
+    move-exception v1
 
-    .line 130
-    .local v0, "e":Landroid/provider/Settings$SettingNotFoundException;
+    .line 148
+    .local v1, "e":Landroid/provider/Settings$SettingNotFoundException;
     invoke-virtual {p0, p1}, Landroid/preference/MiuiCoreSettingsPreference;->setIntegerValue(I)V
 
     goto :goto_0
 
-    .line 120
+    .line 138
+    nop
+
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -575,57 +553,43 @@
 .end method
 
 .method public getStringValue()Ljava/lang/String;
-    .locals 4
+    .locals 3
 
     .prologue
-    const/4 v3, 0x0
+    .line 172
+    new-instance v0, Landroid/preference/MiuiArmourSettingsPreference;
 
-    .line 153
-    new-instance v1, Ljava/lang/String;
+    iget-object v1, p0, Landroid/preference/MiuiCoreSettingsPreference;->mContext:Landroid/content/Context;
 
-    const-string v2, "cm8uYnVpbGQuZGlzcGxheS5pZA=="
+    invoke-direct {v0, v1}, Landroid/preference/MiuiArmourSettingsPreference;-><init>(Landroid/content/Context;)V
 
-    invoke-static {v2, v3}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
-
-    move-result-object v2
-
-    invoke-direct {v1, v2}, Ljava/lang/String;-><init>([B)V
-
-    invoke-static {v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 154
-    .local v0, "sc":Ljava/lang/String;
-    new-instance v1, Ljava/lang/String;
-
-    const-string v2, "TWl1aVBybw=="
-
-    invoke-static {v2, v3}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
-
-    move-result-object v2
-
-    invoke-direct {v1, v2}, Ljava/lang/String;-><init>([B)V
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    .line 173
+    .local v0, "am":Landroid/preference/MiuiArmourSettingsPreference;
+    invoke-virtual {v0}, Landroid/preference/MiuiArmourSettingsPreference;->cBB()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 155
+    invoke-virtual {v0}, Landroid/preference/MiuiArmourSettingsPreference;->cuA()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    .line 175
     iget v1, p0, Landroid/preference/MiuiCoreSettingsPreference;->mStorageType:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 164
+    .line 184
     :cond_0
     const/4 v1, 0x0
 
     :goto_0
     return-object v1
 
-    .line 157
+    .line 177
     :pswitch_0
     iget-object v1, p0, Landroid/preference/MiuiCoreSettingsPreference;->mContext:Landroid/content/Context;
 
@@ -641,7 +605,7 @@
 
     goto :goto_0
 
-    .line 159
+    .line 179
     :pswitch_1
     iget-object v1, p0, Landroid/preference/MiuiCoreSettingsPreference;->mContext:Landroid/content/Context;
 
@@ -657,7 +621,7 @@
 
     goto :goto_0
 
-    .line 161
+    .line 181
     :pswitch_2
     iget-object v1, p0, Landroid/preference/MiuiCoreSettingsPreference;->mContext:Landroid/content/Context;
 
@@ -673,7 +637,7 @@
 
     goto :goto_0
 
-    .line 155
+    .line 175
     nop
 
     :pswitch_data_0
@@ -685,55 +649,41 @@
 .end method
 
 .method public getStringValue(Ljava/lang/String;)Ljava/lang/String;
-    .locals 5
+    .locals 4
     .param p1, "defValue"    # Ljava/lang/String;
 
     .prologue
-    const/4 v4, 0x0
-
-    .line 168
+    .line 188
     const/4 v1, 0x0
 
-    .line 169
+    .line 189
     .local v1, "value":Ljava/lang/String;
-    new-instance v2, Ljava/lang/String;
+    new-instance v0, Landroid/preference/MiuiArmourSettingsPreference;
 
-    const-string v3, "cm8uYnVpbGQuZGlzcGxheS5pZA=="
+    iget-object v2, p0, Landroid/preference/MiuiCoreSettingsPreference;->mContext:Landroid/content/Context;
 
-    invoke-static {v3, v4}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
+    invoke-direct {v0, v2}, Landroid/preference/MiuiArmourSettingsPreference;-><init>(Landroid/content/Context;)V
 
-    move-result-object v3
-
-    invoke-direct {v2, v3}, Ljava/lang/String;-><init>([B)V
-
-    invoke-static {v2}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 170
-    .local v0, "sc":Ljava/lang/String;
-    new-instance v2, Ljava/lang/String;
-
-    const-string v3, "TWl1aVBybw=="
-
-    invoke-static {v3, v4}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
-
-    move-result-object v3
-
-    invoke-direct {v2, v3}, Ljava/lang/String;-><init>([B)V
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    .line 190
+    .local v0, "am":Landroid/preference/MiuiArmourSettingsPreference;
+    invoke-virtual {v0}, Landroid/preference/MiuiArmourSettingsPreference;->cBB()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 171
+    invoke-virtual {v0}, Landroid/preference/MiuiArmourSettingsPreference;->cuA()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    .line 192
     iget v2, p0, Landroid/preference/MiuiCoreSettingsPreference;->mStorageType:I
 
     packed-switch v2, :pswitch_data_0
 
-    .line 183
+    .line 204
     :cond_0
     :goto_0
     if-eqz v1, :cond_1
@@ -742,7 +692,7 @@
     :goto_1
     return-object v1
 
-    .line 173
+    .line 194
     .restart local v1    # "value":Ljava/lang/String;
     :pswitch_0
     iget-object v2, p0, Landroid/preference/MiuiCoreSettingsPreference;->mContext:Landroid/content/Context;
@@ -757,10 +707,10 @@
 
     move-result-object v1
 
-    .line 174
+    .line 195
     goto :goto_0
 
-    .line 176
+    .line 197
     :pswitch_1
     iget-object v2, p0, Landroid/preference/MiuiCoreSettingsPreference;->mContext:Landroid/content/Context;
 
@@ -774,10 +724,10 @@
 
     move-result-object v1
 
-    .line 177
+    .line 198
     goto :goto_0
 
-    .line 179
+    .line 200
     :pswitch_2
     iget-object v2, p0, Landroid/preference/MiuiCoreSettingsPreference;->mContext:Landroid/content/Context;
 
@@ -796,10 +746,10 @@
     :cond_1
     move-object v1, p1
 
-    .line 183
+    .line 204
     goto :goto_1
 
-    .line 171
+    .line 192
     nop
 
     :pswitch_data_0
@@ -817,18 +767,18 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 187
+    .line 208
     const/4 v2, 0x2
 
     new-array v0, v2, [Ljava/lang/String;
 
-    .line 188
+    .line 209
     .local v0, "result":[Ljava/lang/String;
     invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 189
+    .line 210
     .local v1, "tmp":Ljava/lang/String;
     const-string v2, "%s"
 
@@ -842,7 +792,7 @@
 
     aput-object v2, v0, v3
 
-    .line 190
+    .line 211
     const/4 v2, 0x1
 
     const-string v3, "%s"
@@ -859,7 +809,7 @@
 
     aput-object v3, v0, v2
 
-    .line 191
+    .line 212
     return-object v0
 .end method
 
@@ -870,16 +820,16 @@
     .param p3, "mKey"    # Ljava/lang/String;
 
     .prologue
-    .line 19
+    .line 22
     iput-object p1, p0, Landroid/preference/MiuiCoreSettingsPreference;->mContext:Landroid/content/Context;
 
-    .line 20
+    .line 23
     iput-object p2, p0, Landroid/preference/MiuiCoreSettingsPreference;->attrs:Landroid/util/AttributeSet;
 
-    .line 21
+    .line 24
     iput-object p3, p0, Landroid/preference/MiuiCoreSettingsPreference;->mKey:Ljava/lang/String;
 
-    .line 22
+    .line 25
     const-string v0, "intent"
 
     invoke-virtual {p0, v0}, Landroid/preference/MiuiCoreSettingsPreference;->getAttributeValue(Ljava/lang/String;)Ljava/lang/String;
@@ -888,7 +838,7 @@
 
     iput-object v0, p0, Landroid/preference/MiuiCoreSettingsPreference;->mIntent:Ljava/lang/String;
 
-    .line 23
+    .line 26
     const-string/jumbo v0, "storage"
 
     invoke-virtual {p0, v0}, Landroid/preference/MiuiCoreSettingsPreference;->getAttributeValue(Ljava/lang/String;)Ljava/lang/String;
@@ -901,7 +851,7 @@
 
     iput v0, p0, Landroid/preference/MiuiCoreSettingsPreference;->mStorageType:I
 
-    .line 25
+    .line 28
     return-void
 .end method
 
@@ -909,47 +859,33 @@
     .locals 4
 
     .prologue
-    const/4 v3, 0x0
+    .line 216
+    new-instance v0, Landroid/preference/MiuiArmourSettingsPreference;
 
-    .line 195
-    new-instance v1, Ljava/lang/String;
+    iget-object v1, p0, Landroid/preference/MiuiCoreSettingsPreference;->mContext:Landroid/content/Context;
 
-    const-string v2, "cm8uYnVpbGQuZGlzcGxheS5pZA=="
+    invoke-direct {v0, v1}, Landroid/preference/MiuiArmourSettingsPreference;-><init>(Landroid/content/Context;)V
 
-    invoke-static {v2, v3}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
-
-    move-result-object v2
-
-    invoke-direct {v1, v2}, Ljava/lang/String;-><init>([B)V
-
-    invoke-static {v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 196
-    .local v0, "sc":Ljava/lang/String;
-    new-instance v1, Ljava/lang/String;
-
-    const-string v2, "TWl1aVBybw=="
-
-    invoke-static {v2, v3}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
-
-    move-result-object v2
-
-    invoke-direct {v1, v2}, Ljava/lang/String;-><init>([B)V
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    .line 217
+    .local v0, "am":Landroid/preference/MiuiArmourSettingsPreference;
+    invoke-virtual {v0}, Landroid/preference/MiuiArmourSettingsPreference;->cBB()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 197
+    invoke-virtual {v0}, Landroid/preference/MiuiArmourSettingsPreference;->cuA()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    .line 219
     iget-object v1, p0, Landroid/preference/MiuiCoreSettingsPreference;->mIntent:Ljava/lang/String;
 
     if-eqz v1, :cond_0
 
-    .line 198
+    .line 220
     iget-object v1, p0, Landroid/preference/MiuiCoreSettingsPreference;->mContext:Landroid/content/Context;
 
     new-instance v2, Landroid/content/Intent;
@@ -960,7 +896,7 @@
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 201
+    .line 223
     :cond_0
     return-void
 .end method
@@ -971,75 +907,61 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 204
+    .line 226
     if-eqz p1, :cond_0
 
-    .line 205
+    .line 227
     iput-object p1, p0, Landroid/preference/MiuiCoreSettingsPreference;->mContext:Landroid/content/Context;
 
-    .line 207
+    .line 229
     :cond_0
     if-eqz p2, :cond_1
 
-    .line 208
+    .line 230
     iput-object p2, p0, Landroid/preference/MiuiCoreSettingsPreference;->attrs:Landroid/util/AttributeSet;
 
-    .line 210
+    .line 232
     :cond_1
     return-void
 .end method
 
 .method public setIntegerValue(I)V
-    .locals 4
+    .locals 3
     .param p1, "value"    # I
 
     .prologue
-    const/4 v3, 0x0
+    .line 115
+    new-instance v0, Landroid/preference/MiuiArmourSettingsPreference;
 
-    .line 99
-    new-instance v1, Ljava/lang/String;
+    iget-object v1, p0, Landroid/preference/MiuiCoreSettingsPreference;->mContext:Landroid/content/Context;
 
-    const-string v2, "cm8uYnVpbGQuZGlzcGxheS5pZA=="
+    invoke-direct {v0, v1}, Landroid/preference/MiuiArmourSettingsPreference;-><init>(Landroid/content/Context;)V
 
-    invoke-static {v2, v3}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
-
-    move-result-object v2
-
-    invoke-direct {v1, v2}, Ljava/lang/String;-><init>([B)V
-
-    invoke-static {v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 100
-    .local v0, "sc":Ljava/lang/String;
-    new-instance v1, Ljava/lang/String;
-
-    const-string v2, "TWl1aVBybw=="
-
-    invoke-static {v2, v3}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
-
-    move-result-object v2
-
-    invoke-direct {v1, v2}, Ljava/lang/String;-><init>([B)V
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    .line 116
+    .local v0, "am":Landroid/preference/MiuiArmourSettingsPreference;
+    invoke-virtual {v0}, Landroid/preference/MiuiArmourSettingsPreference;->cBB()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 101
+    invoke-virtual {v0}, Landroid/preference/MiuiArmourSettingsPreference;->cuA()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    .line 118
     iget v1, p0, Landroid/preference/MiuiCoreSettingsPreference;->mStorageType:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 113
+    .line 130
     :cond_0
     :goto_0
     return-void
 
-    .line 103
+    .line 120
     :pswitch_0
     iget-object v1, p0, Landroid/preference/MiuiCoreSettingsPreference;->mContext:Landroid/content/Context;
 
@@ -1053,7 +975,7 @@
 
     goto :goto_0
 
-    .line 106
+    .line 123
     :pswitch_1
     iget-object v1, p0, Landroid/preference/MiuiCoreSettingsPreference;->mContext:Landroid/content/Context;
 
@@ -1067,7 +989,7 @@
 
     goto :goto_0
 
-    .line 109
+    .line 126
     :pswitch_2
     iget-object v1, p0, Landroid/preference/MiuiCoreSettingsPreference;->mContext:Landroid/content/Context;
 
@@ -1081,7 +1003,7 @@
 
     goto :goto_0
 
-    .line 101
+    .line 118
     nop
 
     :pswitch_data_0
@@ -1093,56 +1015,42 @@
 .end method
 
 .method public setStringValue(Ljava/lang/String;)V
-    .locals 4
+    .locals 3
     .param p1, "value"    # Ljava/lang/String;
 
     .prologue
-    const/4 v3, 0x0
+    .line 154
+    new-instance v0, Landroid/preference/MiuiArmourSettingsPreference;
 
-    .line 136
-    new-instance v1, Ljava/lang/String;
+    iget-object v1, p0, Landroid/preference/MiuiCoreSettingsPreference;->mContext:Landroid/content/Context;
 
-    const-string v2, "cm8uYnVpbGQuZGlzcGxheS5pZA=="
+    invoke-direct {v0, v1}, Landroid/preference/MiuiArmourSettingsPreference;-><init>(Landroid/content/Context;)V
 
-    invoke-static {v2, v3}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
-
-    move-result-object v2
-
-    invoke-direct {v1, v2}, Ljava/lang/String;-><init>([B)V
-
-    invoke-static {v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 137
-    .local v0, "sc":Ljava/lang/String;
-    new-instance v1, Ljava/lang/String;
-
-    const-string v2, "TWl1aVBybw=="
-
-    invoke-static {v2, v3}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
-
-    move-result-object v2
-
-    invoke-direct {v1, v2}, Ljava/lang/String;-><init>([B)V
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    .line 155
+    .local v0, "am":Landroid/preference/MiuiArmourSettingsPreference;
+    invoke-virtual {v0}, Landroid/preference/MiuiArmourSettingsPreference;->cBB()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 138
+    invoke-virtual {v0}, Landroid/preference/MiuiArmourSettingsPreference;->cuA()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    .line 157
     iget v1, p0, Landroid/preference/MiuiCoreSettingsPreference;->mStorageType:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 150
+    .line 169
     :cond_0
     :goto_0
     return-void
 
-    .line 140
+    .line 159
     :pswitch_0
     iget-object v1, p0, Landroid/preference/MiuiCoreSettingsPreference;->mContext:Landroid/content/Context;
 
@@ -1156,7 +1064,7 @@
 
     goto :goto_0
 
-    .line 143
+    .line 162
     :pswitch_1
     iget-object v1, p0, Landroid/preference/MiuiCoreSettingsPreference;->mContext:Landroid/content/Context;
 
@@ -1170,7 +1078,7 @@
 
     goto :goto_0
 
-    .line 146
+    .line 165
     :pswitch_2
     iget-object v1, p0, Landroid/preference/MiuiCoreSettingsPreference;->mContext:Landroid/content/Context;
 
@@ -1184,7 +1092,7 @@
 
     goto :goto_0
 
-    .line 138
+    .line 157
     nop
 
     :pswitch_data_0

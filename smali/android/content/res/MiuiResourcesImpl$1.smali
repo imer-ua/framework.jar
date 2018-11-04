@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 265
+    .line 269
     .local p1, "val$preload":Landroid/util/LongSparseArray;, "Landroid/util/LongSparseArray<Landroid/graphics/drawable/Drawable$ConstantState;>;"
     iput-object p1, p0, Landroid/content/res/MiuiResourcesImpl$1;->val$preload:Landroid/util/LongSparseArray;
 
@@ -38,7 +38,7 @@
     .locals 4
 
     .prologue
-    .line 268
+    .line 272
     const-wide/16 v2, 0x7530
 
     :try_start_0
@@ -46,16 +46,16 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 271
+    .line 275
     :goto_0
     iget-object v1, p0, Landroid/content/res/MiuiResourcesImpl$1;->val$preload:Landroid/util/LongSparseArray;
 
     invoke-virtual {v1}, Landroid/util/LongSparseArray;->clear()V
 
-    .line 266
+    .line 270
     return-void
 
-    .line 269
+    .line 273
     :catch_0
     move-exception v0
 
