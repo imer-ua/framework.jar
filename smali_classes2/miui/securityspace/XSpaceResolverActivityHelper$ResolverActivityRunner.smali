@@ -629,7 +629,7 @@
 
     iget-object v5, p0, Lmiui/securityspace/XSpaceResolverActivityHelper$ResolverActivityRunner;->mActivity:Landroid/app/Activity;
 
-    const v6, 0x110900ca
+    const v6, 0x110900cb
 
     invoke-virtual {v5, v6}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

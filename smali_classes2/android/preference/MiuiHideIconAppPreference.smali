@@ -210,7 +210,7 @@
 
     iget-object v3, p0, Landroid/preference/MiuiHideIconAppPreference;->CoreSettings:Landroid/preference/MiuiCoreSettingsPreference;
 
-    const-string/jumbo v4, "hide_app_icon"
+    const-string v4, "hide_app_icon"
 
     invoke-virtual {v3, v4}, Landroid/preference/MiuiCoreSettingsPreference;->DrawableToID(Ljava/lang/String;)I
 

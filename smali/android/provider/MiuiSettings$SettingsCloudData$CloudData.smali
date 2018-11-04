@@ -47,14 +47,14 @@
     .locals 1
 
     .prologue
-    .line 5897
+    .line 5951
     new-instance v0, Landroid/provider/MiuiSettings$SettingsCloudData$CloudData$1;
 
     invoke-direct {v0}, Landroid/provider/MiuiSettings$SettingsCloudData$CloudData$1;-><init>()V
 
     sput-object v0, Landroid/provider/MiuiSettings$SettingsCloudData$CloudData;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 5794
+    .line 5848
     return-void
 .end method
 
@@ -63,13 +63,13 @@
     .param p1, "data"    # Ljava/lang/String;
 
     .prologue
-    .line 5798
+    .line 5852
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5799
+    .line 5853
     iput-object p1, p0, Landroid/provider/MiuiSettings$SettingsCloudData$CloudData;->data:Ljava/lang/String;
 
-    .line 5798
+    .line 5852
     return-void
 .end method
 
@@ -83,10 +83,10 @@
     .end annotation
 
     .prologue
-    .line 5831
+    .line 5885
     invoke-direct {p0}, Landroid/provider/MiuiSettings$SettingsCloudData$CloudData;->initJson()V
 
-    .line 5832
+    .line 5886
     iget-object v0, p0, Landroid/provider/MiuiSettings$SettingsCloudData$CloudData;->json:Lorg/json/JSONObject;
 
     invoke-virtual {v0, p1}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
@@ -105,12 +105,12 @@
     .end annotation
 
     .prologue
-    .line 5825
+    .line 5879
     iget-object v0, p0, Landroid/provider/MiuiSettings$SettingsCloudData$CloudData;->json:Lorg/json/JSONObject;
 
     if-nez v0, :cond_0
 
-    .line 5826
+    .line 5880
     new-instance v0, Lorg/json/JSONObject;
 
     iget-object v1, p0, Landroid/provider/MiuiSettings$SettingsCloudData$CloudData;->data:Ljava/lang/String;
@@ -119,7 +119,7 @@
 
     iput-object v0, p0, Landroid/provider/MiuiSettings$SettingsCloudData$CloudData;->json:Lorg/json/JSONObject;
 
-    .line 5824
+    .line 5878
     :cond_0
     return-void
 .end method
@@ -130,7 +130,7 @@
     .locals 1
 
     .prologue
-    .line 5890
+    .line 5944
     const/4 v0, 0x0
 
     return v0
@@ -145,30 +145,30 @@
 
     const/4 v2, 0x0
 
-    .line 5809
+    .line 5863
     if-ne p1, p0, :cond_0
 
-    .line 5810
+    .line 5864
     return v1
 
-    .line 5812
+    .line 5866
     :cond_0
     instance-of v3, p1, Landroid/provider/MiuiSettings$SettingsCloudData$CloudData;
 
     if-nez v3, :cond_1
 
-    .line 5813
+    .line 5867
     return v2
 
     :cond_1
     move-object v0, p1
 
-    .line 5815
+    .line 5869
     nop
 
     nop
 
-    .line 5816
+    .line 5870
     .local v0, "cloudData":Landroid/provider/MiuiSettings$SettingsCloudData$CloudData;
     iget-object v3, p0, Landroid/provider/MiuiSettings$SettingsCloudData$CloudData;->data:Ljava/lang/String;
 
@@ -204,7 +204,7 @@
     .param p2, "defVal"    # Z
 
     .prologue
-    .line 5869
+    .line 5923
     :try_start_0
     invoke-direct {p0, p1}, Landroid/provider/MiuiSettings$SettingsCloudData$CloudData;->hasKey(Ljava/lang/String;)Z
 
@@ -212,7 +212,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 5870
+    .line 5924
     iget-object v1, p0, Landroid/provider/MiuiSettings$SettingsCloudData$CloudData;->json:Lorg/json/JSONObject;
 
     invoke-virtual {v1, p1}, Lorg/json/JSONObject;->getBoolean(Ljava/lang/String;)Z
@@ -223,15 +223,15 @@
 
     return v1
 
-    .line 5872
+    .line 5926
     :catch_0
     move-exception v0
 
-    .line 5873
+    .line 5927
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
-    .line 5875
+    .line 5929
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     return p2
@@ -243,7 +243,7 @@
     .param p2, "defVal"    # I
 
     .prologue
-    .line 5847
+    .line 5901
     :try_start_0
     invoke-direct {p0, p1}, Landroid/provider/MiuiSettings$SettingsCloudData$CloudData;->hasKey(Ljava/lang/String;)Z
 
@@ -251,7 +251,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 5848
+    .line 5902
     iget-object v1, p0, Landroid/provider/MiuiSettings$SettingsCloudData$CloudData;->json:Lorg/json/JSONObject;
 
     invoke-virtual {v1, p1}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
@@ -262,15 +262,15 @@
 
     return v1
 
-    .line 5850
+    .line 5904
     :catch_0
     move-exception v0
 
-    .line 5851
+    .line 5905
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
-    .line 5853
+    .line 5907
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     return p2
@@ -282,7 +282,7 @@
     .param p2, "defVal"    # J
 
     .prologue
-    .line 5858
+    .line 5912
     :try_start_0
     invoke-direct {p0, p1}, Landroid/provider/MiuiSettings$SettingsCloudData$CloudData;->hasKey(Ljava/lang/String;)Z
 
@@ -290,7 +290,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 5859
+    .line 5913
     iget-object v1, p0, Landroid/provider/MiuiSettings$SettingsCloudData$CloudData;->json:Lorg/json/JSONObject;
 
     invoke-virtual {v1, p1}, Lorg/json/JSONObject;->getLong(Ljava/lang/String;)J
@@ -301,15 +301,15 @@
 
     return-wide v2
 
-    .line 5861
+    .line 5915
     :catch_0
     move-exception v0
 
-    .line 5862
+    .line 5916
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
-    .line 5864
+    .line 5918
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     return-wide p2
@@ -321,7 +321,7 @@
     .param p2, "defVal"    # Ljava/lang/String;
 
     .prologue
-    .line 5880
+    .line 5934
     :try_start_0
     invoke-direct {p0, p1}, Landroid/provider/MiuiSettings$SettingsCloudData$CloudData;->hasKey(Ljava/lang/String;)Z
 
@@ -329,7 +329,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 5881
+    .line 5935
     iget-object v1, p0, Landroid/provider/MiuiSettings$SettingsCloudData$CloudData;->json:Lorg/json/JSONObject;
 
     invoke-virtual {v1, p1}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -340,15 +340,15 @@
 
     return-object v1
 
-    .line 5883
+    .line 5937
     :catch_0
     move-exception v0
 
-    .line 5884
+    .line 5938
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
-    .line 5886
+    .line 5940
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     return-object p2
@@ -358,7 +358,7 @@
     .locals 1
 
     .prologue
-    .line 5821
+    .line 5875
     iget-object v0, p0, Landroid/provider/MiuiSettings$SettingsCloudData$CloudData;->data:Ljava/lang/String;
 
     if-eqz v0, :cond_0
@@ -382,26 +382,26 @@
     .locals 2
 
     .prologue
-    .line 5837
+    .line 5891
     :try_start_0
     invoke-direct {p0}, Landroid/provider/MiuiSettings$SettingsCloudData$CloudData;->initJson()V
 
-    .line 5838
+    .line 5892
     iget-object v1, p0, Landroid/provider/MiuiSettings$SettingsCloudData$CloudData;->json:Lorg/json/JSONObject;
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
     return-object v1
 
-    .line 5839
+    .line 5893
     :catch_0
     move-exception v0
 
-    .line 5840
+    .line 5894
     .local v0, "e":Lorg/json/JSONException;
     invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
-    .line 5841
+    .line 5895
     const/4 v1, 0x0
 
     return-object v1
@@ -411,7 +411,7 @@
     .locals 1
 
     .prologue
-    .line 5804
+    .line 5858
     iget-object v0, p0, Landroid/provider/MiuiSettings$SettingsCloudData$CloudData;->data:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->toString()Ljava/lang/String;
@@ -427,11 +427,11 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 5894
+    .line 5948
     iget-object v0, p0, Landroid/provider/MiuiSettings$SettingsCloudData$CloudData;->data:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 5893
+    .line 5947
     return-void
 .end method

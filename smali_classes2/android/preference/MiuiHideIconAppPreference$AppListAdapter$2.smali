@@ -27,7 +27,7 @@
     .param p1, "this$1"    # Landroid/preference/MiuiHideIconAppPreference$AppListAdapter;
 
     .prologue
-    .line 444
+    .line 448
     iput-object p1, p0, Landroid/preference/MiuiHideIconAppPreference$AppListAdapter$2;->this$1:Landroid/preference/MiuiHideIconAppPreference$AppListAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,7 +45,7 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 447
+    .line 451
     invoke-virtual {p1}, Landroid/widget/CompoundButton;->getTag()Ljava/lang/Object;
 
     move-result-object v2
@@ -56,8 +56,8 @@
 
     move-result v0
 
-    .line 448
-    .local v0, "mPostion":I
+    .line 452
+    .local v0, "mPosition":I
     new-instance v2, Ljava/lang/String;
 
     const-string v3, "cm8uYnVpbGQuZGlzcGxheS5pZA=="
@@ -72,7 +72,7 @@
 
     move-result-object v1
 
-    .line 449
+    .line 453
     .local v1, "sc":Ljava/lang/String;
     new-instance v2, Ljava/lang/String;
 
@@ -90,14 +90,14 @@
 
     if-eqz v2, :cond_0
 
-    .line 450
+    .line 454
     invoke-virtual {p1}, Landroid/widget/CompoundButton;->isChecked()Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 451
+    .line 455
     iget-object v2, p0, Landroid/preference/MiuiHideIconAppPreference$AppListAdapter$2;->this$1:Landroid/preference/MiuiHideIconAppPreference$AppListAdapter;
 
     invoke-static {v2}, Landroid/preference/MiuiHideIconAppPreference$AppListAdapter;->access$600(Landroid/preference/MiuiHideIconAppPreference$AppListAdapter;)Ljava/util/HashMap;
@@ -122,12 +122,12 @@
 
     invoke-virtual {v2, v3, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 456
+    .line 461
     :cond_0
     :goto_0
     return-void
 
-    .line 453
+    .line 457
     :cond_1
     iget-object v2, p0, Landroid/preference/MiuiHideIconAppPreference$AppListAdapter$2;->this$1:Landroid/preference/MiuiHideIconAppPreference$AppListAdapter;
 

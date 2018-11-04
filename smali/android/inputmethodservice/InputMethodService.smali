@@ -516,43 +516,43 @@
     packed-switch v0, :pswitch_data_0
 
     .line 2547
-    const v0, 0x1080369
+    const v0, 0x108036b
 
     return v0
 
     .line 2535
     :pswitch_0
-    const v0, 0x1080366
+    const v0, 0x1080368
 
     return v0
 
     .line 2537
     :pswitch_1
-    const v0, 0x108036a
+    const v0, 0x108036c
 
     return v0
 
     .line 2539
     :pswitch_2
-    const v0, 0x108036b
+    const v0, 0x108036d
 
     return v0
 
     .line 2541
     :pswitch_3
-    const v0, 0x1080367
+    const v0, 0x1080369
 
     return v0
 
     .line 2543
     :pswitch_4
-    const v0, 0x1080365
+    const v0, 0x1080367
 
     return v0
 
     .line 2545
     :pswitch_5
-    const v0, 0x1080368
+    const v0, 0x108036a
 
     return v0
 

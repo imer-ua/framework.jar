@@ -32,7 +32,7 @@
     .locals 0
 
     .prologue
-    .line 5897
+    .line 5951
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +45,7 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 5900
+    .line 5954
     new-instance v0, Landroid/provider/MiuiSettings$SettingsCloudData$CloudData;
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -62,7 +62,7 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 5899
+    .line 5953
     invoke-virtual {p0, p1}, Landroid/provider/MiuiSettings$SettingsCloudData$CloudData$1;->createFromParcel(Landroid/os/Parcel;)Landroid/provider/MiuiSettings$SettingsCloudData$CloudData;
 
     move-result-object v0
@@ -75,7 +75,7 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 5904
+    .line 5958
     new-array v0, p1, [Landroid/provider/MiuiSettings$SettingsCloudData$CloudData;
 
     return-object v0
@@ -86,7 +86,7 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 5903
+    .line 5957
     invoke-virtual {p0, p1}, Landroid/provider/MiuiSettings$SettingsCloudData$CloudData$1;->newArray(I)[Landroid/provider/MiuiSettings$SettingsCloudData$CloudData;
 
     move-result-object v0

@@ -49,7 +49,7 @@
     .line 296
     iget-object v0, p0, Landroid/graphics/improve/SuperResolution$2;->val$context:Landroid/content/Context;
 
-    const v1, 0x110900ef
+    const v1, 0x110900f0
 
     const/4 v2, 0x1
 

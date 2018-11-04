@@ -30,7 +30,7 @@
     sput-object v1, Lcom/android/internal/util/MimeIconUtils;->sMimeIcons:Ljava/util/HashMap;
 
     .line 41
-    const v0, 0x108033c
+    const v0, 0x108033e
 
     .line 42
     .local v0, "icon":I
@@ -39,7 +39,7 @@
     invoke-static {v1, v0}, Lcom/android/internal/util/MimeIconUtils;->add(Ljava/lang/String;I)V
 
     .line 45
-    const v0, 0x108033d
+    const v0, 0x108033f
 
     .line 46
     const-string/jumbo v1, "application/ogg"
@@ -52,7 +52,7 @@
     invoke-static {v1, v0}, Lcom/android/internal/util/MimeIconUtils;->add(Ljava/lang/String;I)V
 
     .line 50
-    const v0, 0x108033e
+    const v0, 0x1080340
 
     .line 51
     const-string/jumbo v1, "application/pgp-keys"
@@ -105,7 +105,7 @@
     invoke-static {v1, v0}, Lcom/android/internal/util/MimeIconUtils;->add(Ljava/lang/String;I)V
 
     .line 63
-    const v0, 0x108033f
+    const v0, 0x1080341
 
     .line 64
     const-string/jumbo v1, "application/rdf+xml"
@@ -248,7 +248,7 @@
     invoke-static {v1, v0}, Lcom/android/internal/util/MimeIconUtils;->add(Ljava/lang/String;I)V
 
     .line 94
-    const v0, 0x1080340
+    const v0, 0x1080342
 
     .line 95
     const-string/jumbo v1, "application/mac-binhex40"
@@ -341,7 +341,7 @@
     invoke-static {v1, v0}, Lcom/android/internal/util/MimeIconUtils;->add(Ljava/lang/String;I)V
 
     .line 115
-    const v0, 0x1080341
+    const v0, 0x1080343
 
     .line 116
     const-string/jumbo v1, "text/x-vcard"
@@ -354,7 +354,7 @@
     invoke-static {v1, v0}, Lcom/android/internal/util/MimeIconUtils;->add(Ljava/lang/String;I)V
 
     .line 120
-    const v0, 0x1080343
+    const v0, 0x1080345
 
     .line 121
     const-string/jumbo v1, "text/calendar"
@@ -367,7 +367,7 @@
     invoke-static {v1, v0}, Lcom/android/internal/util/MimeIconUtils;->add(Ljava/lang/String;I)V
 
     .line 125
-    const v0, 0x1080346
+    const v0, 0x1080348
 
     .line 126
     const-string/jumbo v1, "application/x-font"
@@ -390,7 +390,7 @@
     invoke-static {v1, v0}, Lcom/android/internal/util/MimeIconUtils;->add(Ljava/lang/String;I)V
 
     .line 132
-    const v0, 0x1080348
+    const v0, 0x108034a
 
     .line 133
     const-string/jumbo v1, "application/vnd.oasis.opendocument.graphics"
@@ -423,7 +423,7 @@
     invoke-static {v1, v0}, Lcom/android/internal/util/MimeIconUtils;->add(Ljava/lang/String;I)V
 
     .line 141
-    const v0, 0x1080349
+    const v0, 0x108034b
 
     .line 142
     const-string/jumbo v1, "application/pdf"
@@ -431,7 +431,7 @@
     invoke-static {v1, v0}, Lcom/android/internal/util/MimeIconUtils;->add(Ljava/lang/String;I)V
 
     .line 145
-    const v0, 0x108034b
+    const v0, 0x108034d
 
     .line 146
     const-string/jumbo v1, "application/vnd.stardivision.impress"
@@ -459,7 +459,7 @@
     invoke-static {v1, v0}, Lcom/android/internal/util/MimeIconUtils;->add(Ljava/lang/String;I)V
 
     .line 153
-    const v0, 0x108034c
+    const v0, 0x108034e
 
     .line 154
     const-string/jumbo v1, "application/vnd.oasis.opendocument.spreadsheet"
@@ -492,7 +492,7 @@
     invoke-static {v1, v0}, Lcom/android/internal/util/MimeIconUtils;->add(Ljava/lang/String;I)V
 
     .line 162
-    const v0, 0x1080342
+    const v0, 0x1080344
 
     .line 163
     const-string/jumbo v1, "application/vnd.oasis.opendocument.text"
@@ -550,7 +550,7 @@
     invoke-static {v1, v0}, Lcom/android/internal/util/MimeIconUtils;->add(Ljava/lang/String;I)V
 
     .line 176
-    const v0, 0x108034e
+    const v0, 0x1080350
 
     .line 177
     const-string/jumbo v1, "application/x-quicktimeplayer"
@@ -563,7 +563,7 @@
     invoke-static {v1, v0}, Lcom/android/internal/util/MimeIconUtils;->add(Ljava/lang/String;I)V
 
     .line 181
-    const v0, 0x108034f
+    const v0, 0x1080351
 
     .line 182
     const-string/jumbo v1, "application/msword"
@@ -581,7 +581,7 @@
     invoke-static {v1, v0}, Lcom/android/internal/util/MimeIconUtils;->add(Ljava/lang/String;I)V
 
     .line 187
-    const v0, 0x1080344
+    const v0, 0x1080346
 
     .line 188
     const-string/jumbo v1, "application/vnd.ms-excel"
@@ -599,7 +599,7 @@
     invoke-static {v1, v0}, Lcom/android/internal/util/MimeIconUtils;->add(Ljava/lang/String;I)V
 
     .line 193
-    const v0, 0x108034a
+    const v0, 0x108034c
 
     .line 194
     const-string/jumbo v1, "application/vnd.ms-powerpoint"
@@ -702,7 +702,7 @@
     if-eqz v2, :cond_0
 
     .line 202
-    const v2, 0x1080345
+    const v2, 0x1080347
 
     invoke-virtual {p0, v2}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -765,7 +765,7 @@
     if-eqz v2, :cond_3
 
     .line 219
-    const v2, 0x108033d
+    const v2, 0x108033f
 
     invoke-virtual {p0, v2}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -784,7 +784,7 @@
     if-eqz v2, :cond_4
 
     .line 221
-    const v2, 0x1080348
+    const v2, 0x108034a
 
     invoke-virtual {p0, v2}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -803,7 +803,7 @@
     if-eqz v2, :cond_5
 
     .line 223
-    const v2, 0x108034d
+    const v2, 0x108034f
 
     invoke-virtual {p0, v2}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -822,7 +822,7 @@
     if-eqz v2, :cond_6
 
     .line 225
-    const v2, 0x108034e
+    const v2, 0x1080350
 
     invoke-virtual {p0, v2}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -832,7 +832,7 @@
 
     .line 227
     :cond_6
-    const v2, 0x1080347
+    const v2, 0x1080349
 
     invoke-virtual {p0, v2}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 

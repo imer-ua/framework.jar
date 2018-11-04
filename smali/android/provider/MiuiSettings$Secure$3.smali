@@ -33,7 +33,7 @@
     .param p3, "val$clickListener"    # Landroid/content/DialogInterface$OnClickListener;
 
     .prologue
-    .line 2920
+    .line 2974
     iput-object p1, p0, Landroid/provider/MiuiSettings$Secure$3;->val$act:Landroid/app/Activity;
 
     iput-object p2, p0, Landroid/provider/MiuiSettings$Secure$3;->val$businessKey:Ljava/lang/String;
@@ -53,12 +53,12 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 2923
+    .line 2977
     const/4 v0, -0x1
 
     if-ne p2, v0, :cond_0
 
-    .line 2924
+    .line 2978
     iget-object v0, p0, Landroid/provider/MiuiSettings$Secure$3;->val$act:Landroid/app/Activity;
 
     invoke-virtual {v0}, Landroid/content/ContextWrapper;->getContentResolver()Landroid/content/ContentResolver;
@@ -71,18 +71,18 @@
 
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 2926
+    .line 2980
     :cond_0
     iget-object v0, p0, Landroid/provider/MiuiSettings$Secure$3;->val$clickListener:Landroid/content/DialogInterface$OnClickListener;
 
     if-eqz v0, :cond_1
 
-    .line 2927
+    .line 2981
     iget-object v0, p0, Landroid/provider/MiuiSettings$Secure$3;->val$clickListener:Landroid/content/DialogInterface$OnClickListener;
 
     invoke-interface {v0, p1, p2}, Landroid/content/DialogInterface$OnClickListener;->onClick(Landroid/content/DialogInterface;I)V
 
-    .line 2922
+    .line 2976
     :cond_1
     return-void
 .end method

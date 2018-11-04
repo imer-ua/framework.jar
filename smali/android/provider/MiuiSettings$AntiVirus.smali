@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 4591
+    .line 4645
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,17 +34,17 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 4595
+    .line 4649
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 4596
+    .line 4650
     const-string/jumbo v1, "virus_scan_install"
 
     const/4 v2, 0x1
 
-    .line 4595
+    .line 4649
     invoke-static {v0, v1, v2}, Lmiui/provider/ExtraSettings$System;->getBoolean(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
 
     move-result v0
@@ -58,17 +58,17 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 4600
+    .line 4654
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 4601
+    .line 4655
     const-string/jumbo v1, "virus_scan_install"
 
-    .line 4600
+    .line 4654
     invoke-static {v0, v1, p1}, Lmiui/provider/ExtraSettings$System;->putBoolean(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
 
-    .line 4599
+    .line 4653
     return-void
 .end method

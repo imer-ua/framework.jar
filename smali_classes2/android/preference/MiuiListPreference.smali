@@ -6,8 +6,6 @@
 # instance fields
 .field public CoreSettings:Landroid/preference/MiuiCoreSettingsPreference;
 
-.field private mContext:Landroid/content/Context;
-
 .field private mLastState:Ljava/lang/String;
 
 .field private mPrSfSummary:[Ljava/lang/String;
@@ -16,24 +14,15 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 2
-    .param p1, "context"    # Landroid/content/Context;
-    .param p2, "attrs"    # Landroid/util/AttributeSet;
 
-    .prologue
-    .line 23
     invoke-direct {p0, p1, p2}, Landroid/preference/ListPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 17
     new-instance v0, Landroid/preference/MiuiCoreSettingsPreference;
 
     invoke-direct {v0}, Landroid/preference/MiuiCoreSettingsPreference;-><init>()V
 
     iput-object v0, p0, Landroid/preference/MiuiListPreference;->CoreSettings:Landroid/preference/MiuiCoreSettingsPreference;
 
-    .line 24
-    iput-object p1, p0, Landroid/preference/MiuiListPreference;->mContext:Landroid/content/Context;
-
-    .line 25
     iget-object v0, p0, Landroid/preference/MiuiListPreference;->CoreSettings:Landroid/preference/MiuiCoreSettingsPreference;
 
     invoke-virtual {p0}, Landroid/preference/MiuiListPreference;->getKey()Ljava/lang/String;
@@ -42,7 +31,6 @@
 
     invoke-virtual {v0, p1, p2, v1}, Landroid/preference/MiuiCoreSettingsPreference;->initialization(Landroid/content/Context;Landroid/util/AttributeSet;Ljava/lang/String;)V
 
-    .line 27
     return-void
 .end method
 
@@ -180,20 +168,63 @@
 .end method
 
 .method public setSummary(Ljava/lang/CharSequence;)V
-    .locals 1
+    .locals 4
     .param p1, "summary"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 88
-    iget-object v0, p0, Landroid/preference/MiuiListPreference;->mContext:Landroid/content/Context;
+    const/4 v3, 0x0
 
-    invoke-static {v0, p1}, Landroid/preference/MiuiArmourSettingsPreference;->checkSummary(Landroid/content/Context;Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    .line 94
+    new-instance v1, Ljava/lang/String;
+
+    const-string v2, "cm8uYnVpbGQuZGlzcGxheS5pZA=="
+
+    invoke-static {v2, v3}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
+
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Ljava/lang/String;-><init>([B)V
+
+    invoke-static {v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-super {p0, v0}, Landroid/preference/ListPreference;->setSummary(Ljava/lang/CharSequence;)V
+    .line 95
+    .local v0, "sc":Ljava/lang/String;
+    new-instance v1, Ljava/lang/String;
 
-    .line 89
+    const-string v2, "TWl1aVBybw=="
+
+    invoke-static {v2, v3}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
+
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Ljava/lang/String;-><init>([B)V
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    .line 96
+    new-instance p1, Ljava/lang/String;
+
+    .end local p1    # "summary":Ljava/lang/CharSequence;
+    const-string/jumbo v1, "wqkgTWl1aVByby5pbmZv"
+
+    invoke-static {v1, v3}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
+
+    move-result-object v1
+
+    invoke-direct {p1, v1}, Ljava/lang/String;-><init>([B)V
+
+    .line 98
+    .restart local p1    # "summary":Ljava/lang/CharSequence;
+    :cond_0
+    invoke-super {p0, p1}, Landroid/preference/ListPreference;->setSummary(Ljava/lang/CharSequence;)V
+
+    .line 99
     return-void
 .end method
 

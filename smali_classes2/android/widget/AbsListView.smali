@@ -15875,7 +15875,7 @@
 
     const-string v6, "listview_animation"
 
-    invoke-static {v3, v6}, Landroid/preference/MiuiCoreSettingsPreference;->getKeyParam(Landroid/content/Context;Ljava/lang/String;)I
+    invoke-static {v6, v3}, Landroid/preference/MiuiCoreSettingsPreference;->gKP(Ljava/lang/String;Landroid/content/Context;)I
 
     move-result v10
 
@@ -15927,7 +15927,7 @@
 
     const-string v2, "listview_interpolator"
 
-    invoke-static {v1, v2}, Landroid/preference/MiuiCoreSettingsPreference;->getKeyParam(Landroid/content/Context;Ljava/lang/String;)I
+    invoke-static {v2, v1}, Landroid/preference/MiuiCoreSettingsPreference;->gKP(Ljava/lang/String;Landroid/content/Context;)I
 
     move-result v12
 
