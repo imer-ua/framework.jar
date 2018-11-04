@@ -1275,7 +1275,7 @@
     if-eqz v2, :cond_1
 
     .line 500
-    const v4, 0x11090100
+    const v4, 0x11090101
 
     iput v4, p0, Lcom/android/internal/app/ResolverActivity;->mProfileSwitchMessageId:I
 
@@ -1300,7 +1300,7 @@
     .end local v0    # "originIsManaged":Z
     .restart local v2    # "targetIsManaged":Z
     :cond_3
-    const v4, 0x110900ff
+    const v4, 0x11090100
 
     iput v4, p0, Lcom/android/internal/app/ResolverActivity;->mProfileSwitchMessageId:I
 

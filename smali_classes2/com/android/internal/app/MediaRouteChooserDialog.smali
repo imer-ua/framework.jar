@@ -196,7 +196,7 @@
     move-result-object v0
 
     .line 133
-    const v1, 0x10803bd
+    const v1, 0x10803bf
 
     .line 132
     invoke-virtual {v0, v2, v1}, Landroid/view/Window;->setFeatureDrawableResource(II)V

@@ -49,7 +49,7 @@
     .line 241
     iget-object v0, p0, Lmiui/view/MiuiSecurityPermissionHandler$4;->val$parentView:Landroid/view/View;
 
-    const v1, 0x110c004d
+    const v1, 0x110c004e
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

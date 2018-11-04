@@ -344,7 +344,7 @@
     invoke-virtual {v4, v6}, Landroid/graphics/Paint;->setStrokeCap(Landroid/graphics/Paint$Cap;)V
 
     .line 154
-    const v4, 0x11020012
+    const v4, 0x11020014
 
     invoke-direct {p0, v4}, Lcom/android/internal/widget/MiuiLockPatternView;->getBitmapFor(I)Landroid/graphics/Bitmap;
 
@@ -353,7 +353,7 @@
     iput-object v4, p0, Lcom/android/internal/widget/MiuiLockPatternView;->mBitmapBtnError:Landroid/graphics/Bitmap;
 
     .line 155
-    const v4, 0x11020013
+    const v4, 0x11020015
 
     invoke-direct {p0, v4}, Lcom/android/internal/widget/MiuiLockPatternView;->getBitmapFor(I)Landroid/graphics/Bitmap;
 
@@ -362,7 +362,7 @@
     iput-object v4, p0, Lcom/android/internal/widget/MiuiLockPatternView;->mBitmapBtnTouched:Landroid/graphics/Bitmap;
 
     .line 156
-    const v4, 0x1102006b
+    const v4, 0x1102006d
 
     invoke-direct {p0, v4}, Lcom/android/internal/widget/MiuiLockPatternView;->getBitmapFor(I)Landroid/graphics/Bitmap;
 
@@ -371,7 +371,7 @@
     iput-object v4, p0, Lcom/android/internal/widget/MiuiLockPatternView;->mBitmapCircleDefault:Landroid/graphics/Bitmap;
 
     .line 157
-    const v4, 0x1102006c
+    const v4, 0x1102006e
 
     invoke-direct {p0, v4}, Lcom/android/internal/widget/MiuiLockPatternView;->getBitmapFor(I)Landroid/graphics/Bitmap;
 
@@ -380,7 +380,7 @@
     iput-object v4, p0, Lcom/android/internal/widget/MiuiLockPatternView;->mBitmapCircleGreen:Landroid/graphics/Bitmap;
 
     .line 158
-    const v4, 0x1102006d
+    const v4, 0x1102006f
 
     invoke-direct {p0, v4}, Lcom/android/internal/widget/MiuiLockPatternView;->getBitmapFor(I)Landroid/graphics/Bitmap;
 
@@ -389,7 +389,7 @@
     iput-object v4, p0, Lcom/android/internal/widget/MiuiLockPatternView;->mBitmapCircleRed:Landroid/graphics/Bitmap;
 
     .line 160
-    const v4, 0x11020069
+    const v4, 0x1102006b
 
     invoke-direct {p0, v4}, Lcom/android/internal/widget/MiuiLockPatternView;->getBitmapFor(I)Landroid/graphics/Bitmap;
 
@@ -398,7 +398,7 @@
     iput-object v4, p0, Lcom/android/internal/widget/MiuiLockPatternView;->mBitmapArrowGreenUp:Landroid/graphics/Bitmap;
 
     .line 161
-    const v4, 0x1102006a
+    const v4, 0x1102006c
 
     invoke-direct {p0, v4}, Lcom/android/internal/widget/MiuiLockPatternView;->getBitmapFor(I)Landroid/graphics/Bitmap;
 

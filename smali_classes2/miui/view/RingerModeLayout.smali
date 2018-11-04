@@ -406,7 +406,7 @@
     if-ne v1, v2, :cond_0
 
     .line 454
-    const v0, 0x110900d8
+    const v0, 0x110900d9
 
     .line 455
     .local v0, "textRes":I
@@ -422,7 +422,7 @@
 
     .line 454
     :cond_0
-    const v0, 0x110900d9
+    const v0, 0x110900da
 
     .restart local v0    # "textRes":I
     goto :goto_0
@@ -432,7 +432,7 @@
     :cond_1
     iget-object v1, p0, Lmiui/view/RingerModeLayout;->mSilenceModeTitle:Landroid/widget/TextView;
 
-    const v2, 0x110900d5
+    const v2, 0x110900d6
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(I)V
 
@@ -1143,7 +1143,7 @@
 
     aput-object v8, v7, v4
 
-    const v4, 0x110900e3
+    const v4, 0x110900e4
 
     invoke-virtual {v6, v4, v7}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -1980,7 +1980,7 @@
     if-ne v3, v4, :cond_1
 
     .line 443
-    const v0, 0x110900d8
+    const v0, 0x110900d9
 
     .line 444
     .local v0, "textRes":I
@@ -1999,7 +1999,7 @@
 
     .line 443
     :cond_1
-    const v0, 0x110900d9
+    const v0, 0x110900da
 
     .restart local v0    # "textRes":I
     goto :goto_1
@@ -2009,7 +2009,7 @@
     :cond_2
     iget-object v3, p0, Lmiui/view/RingerModeLayout;->mSilenceModeTitle:Landroid/widget/TextView;
 
-    const v4, 0x110900d5
+    const v4, 0x110900d6
 
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setText(I)V
 

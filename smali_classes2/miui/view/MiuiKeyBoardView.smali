@@ -1007,7 +1007,7 @@
     .line 433
     iget-object v3, p0, Lmiui/view/MiuiKeyBoardView;->mBtnCapsLock:Landroid/view/View;
 
-    const v4, 0x11020073
+    const v4, 0x11020075
 
     invoke-virtual {v3, v4}, Landroid/view/View;->setBackgroundResource(I)V
 
@@ -1025,7 +1025,7 @@
     :cond_4
     iget-object v3, p0, Lmiui/view/MiuiKeyBoardView;->mBtnCapsLock:Landroid/view/View;
 
-    const v4, 0x11020072
+    const v4, 0x11020074
 
     invoke-virtual {v3, v4}, Landroid/view/View;->setBackgroundResource(I)V
 
@@ -1780,7 +1780,7 @@
     iput-object v1, p0, Lmiui/view/MiuiKeyBoardView;->mBtnLetterOK:Landroid/view/View;
 
     .line 119
-    const v1, 0x110c0052
+    const v1, 0x110c0053
 
     invoke-virtual {p0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1798,7 +1798,7 @@
     invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
 
     .line 121
-    const v1, 0x110c0053
+    const v1, 0x110c0054
 
     invoke-virtual {p0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1807,7 +1807,7 @@
     iput-object v1, p0, Lmiui/view/MiuiKeyBoardView;->mBtnSymbolDelete:Landroid/view/View;
 
     .line 122
-    const v1, 0x110c0054
+    const v1, 0x110c0055
 
     invoke-virtual {p0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1816,7 +1816,7 @@
     iput-object v1, p0, Lmiui/view/MiuiKeyBoardView;->mBtnToLetterBoard:Landroid/view/View;
 
     .line 123
-    const v1, 0x110c0055
+    const v1, 0x110c0056
 
     invoke-virtual {p0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1825,7 +1825,7 @@
     iput-object v1, p0, Lmiui/view/MiuiKeyBoardView;->mBtnSymbolSpace:Landroid/view/View;
 
     .line 124
-    const v1, 0x110c0056
+    const v1, 0x110c0057
 
     invoke-virtual {p0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

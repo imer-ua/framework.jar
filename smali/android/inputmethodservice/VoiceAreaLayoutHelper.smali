@@ -146,7 +146,7 @@
     .line 65
     iget-object v0, p0, Landroid/inputmethodservice/VoiceAreaLayoutHelper;->mContext:Landroid/content/Context;
 
-    const v1, 0x110900f6
+    const v1, 0x110900f7
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -343,7 +343,7 @@
     .line 222
     iget-object v0, p0, Landroid/inputmethodservice/VoiceAreaLayoutHelper;->mVoiceToTextLayout:Landroid/widget/LinearLayout;
 
-    const v1, 0x110c0063
+    const v1, 0x110c0064
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -357,7 +357,7 @@
     .line 224
     iget-object v0, p0, Landroid/inputmethodservice/VoiceAreaLayoutHelper;->mVoiceToTextLayout:Landroid/widget/LinearLayout;
 
-    const v1, 0x110c0064
+    const v1, 0x110c0065
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -508,7 +508,7 @@
     :cond_1
     iget-object v2, p0, Landroid/inputmethodservice/VoiceAreaLayoutHelper;->mVoiceInputButton:Landroid/widget/LinearLayout;
 
-    const v3, 0x110c0061
+    const v3, 0x110c0062
 
     invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -520,7 +520,7 @@
     .local v0, "voiceButton":Landroid/widget/LinearLayout;
     iget-object v2, p0, Landroid/inputmethodservice/VoiceAreaLayoutHelper;->mVoiceInputButton:Landroid/widget/LinearLayout;
 
-    const v3, 0x110c0062
+    const v3, 0x110c0063
 
     invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

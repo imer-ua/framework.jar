@@ -240,7 +240,7 @@
     if-eqz v1, :cond_0
 
     .line 2383
-    const v1, 0x1080331
+    const v1, 0x1080333
 
     return v1
 
@@ -253,7 +253,7 @@
     if-eqz v1, :cond_1
 
     .line 2388
-    const v1, 0x11020066
+    const v1, 0x11020068
 
     return v1
 
@@ -4124,7 +4124,7 @@
 
     .prologue
     .line 1183
-    const v1, 0x108032d
+    const v1, 0x108032f
 
     .line 1182
     invoke-direct {p0, v1, p3}, Landroid/app/ApplicationPackageManager;->getDrawableForDensity(II)Landroid/graphics/drawable/Drawable;
@@ -6220,7 +6220,7 @@
 
     .prologue
     .line 1209
-    const v0, 0x108032d
+    const v0, 0x108032f
 
     invoke-direct {p0, p1, v0, p2}, Landroid/app/ApplicationPackageManager;->getManagedProfileIconForDensity(Landroid/os/UserHandle;II)Landroid/graphics/drawable/Drawable;
 
@@ -6236,7 +6236,7 @@
 
     .prologue
     .line 1216
-    const v0, 0x108032e
+    const v0, 0x1080330
 
     .line 1215
     invoke-direct {p0, p1, v0, p2}, Landroid/app/ApplicationPackageManager;->getManagedProfileIconForDensity(Landroid/os/UserHandle;II)Landroid/graphics/drawable/Drawable;

@@ -17,8 +17,6 @@
 # instance fields
 .field public CoreSettings:Landroid/preference/MiuiCoreSettingsPreference;
 
-.field private mContext:Landroid/content/Context;
-
 .field private mDefaultValue:I
 
 .field private mHintStyle:Ljava/lang/String;
@@ -53,8 +51,6 @@
     invoke-direct {v0}, Landroid/preference/MiuiCoreSettingsPreference;-><init>()V
 
     iput-object v0, p0, Landroid/preference/MiuiSeekBarPreference;->CoreSettings:Landroid/preference/MiuiCoreSettingsPreference;
-
-    iput-object p1, p0, Landroid/preference/MiuiSeekBarPreference;->mContext:Landroid/content/Context;
 
     iget-object v0, p0, Landroid/preference/MiuiSeekBarPreference;->CoreSettings:Landroid/preference/MiuiCoreSettingsPreference;
 
@@ -720,54 +716,98 @@
 .end method
 
 .method public setSummary(Ljava/lang/CharSequence;)V
-    .locals 3
+    .locals 4
     .param p1, "summary"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 79
-    new-instance v0, Ljava/lang/StringBuilder;
+    const/4 v3, 0x0
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    .line 83
+    new-instance v1, Ljava/lang/String;
 
-    iget-object v1, p0, Landroid/preference/MiuiSeekBarPreference;->mPrSfSummary:[Ljava/lang/String;
+    const-string v2, "cm8uYnVpbGQuZGlzcGxheS5pZA=="
 
-    const/4 v2, 0x0
+    invoke-static {v2, v3}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
 
-    aget-object v1, v1, v2
+    move-result-object v2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v1, v2}, Ljava/lang/String;-><init>([B)V
 
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-static {v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    iget-object v1, p0, Landroid/preference/MiuiSeekBarPreference;->mPrSfSummary:[Ljava/lang/String;
+    .line 84
+    .local v0, "sc":Ljava/lang/String;
+    new-instance v1, Ljava/lang/String;
 
-    const/4 v2, 0x1
+    const-string v2, "TWl1aVBybw=="
 
-    aget-object v1, v1, v2
+    invoke-static {v2, v3}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v2
 
-    move-result-object v0
+    invoke-direct {v1, v2}, Ljava/lang/String;-><init>([B)V
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    .line 85
+    new-instance p1, Ljava/lang/String;
+
+    .end local p1    # "summary":Ljava/lang/CharSequence;
+    const-string/jumbo v1, "wqkgTWl1aVByby5pbmZv"
+
+    invoke-static {v1, v3}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
+
+    move-result-object v1
+
+    invoke-direct {p1, v1}, Ljava/lang/String;-><init>([B)V
+
+    .line 89
+    .restart local p1    # "summary":Ljava/lang/CharSequence;
+    :goto_0
+    invoke-super {p0, p1}, Landroid/preference/DialogPreference;->setSummary(Ljava/lang/CharSequence;)V
+
+    .line 90
+    return-void
+
+    .line 87
+    :cond_0
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v2, p0, Landroid/preference/MiuiSeekBarPreference;->mPrSfSummary:[Ljava/lang/String;
+
+    aget-object v2, v2, v3
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget-object v2, p0, Landroid/preference/MiuiSeekBarPreference;->mPrSfSummary:[Ljava/lang/String;
+
+    const/4 v3, 0x1
+
+    aget-object v2, v2, v3
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 80
-    iget-object v0, p0, Landroid/preference/MiuiSeekBarPreference;->mContext:Landroid/content/Context;
-
-    invoke-static {v0, p1}, Landroid/preference/MiuiArmourSettingsPreference;->checkSummary(Landroid/content/Context;Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
-
-    move-result-object v0
-
-    invoke-super {p0, v0}, Landroid/preference/DialogPreference;->setSummary(Ljava/lang/CharSequence;)V
-
-    .line 81
-    return-void
+    goto :goto_0
 .end method
 
 .method public shouldDisableDependents()Z

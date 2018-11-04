@@ -143,7 +143,7 @@
     move-result-object v6
 
     .line 89
-    const v7, 0x1080577
+    const v7, 0x108057c
 
     invoke-virtual {p0, v7}, Lcom/android/internal/app/PlatLogoActivity;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 

@@ -91,12 +91,12 @@
     iput v0, p0, Lmiui/widget/CircleProgressView;->mMaxProgress:I
 
     .line 48
-    const v0, 0x11020020
+    const v0, 0x11020022
 
     invoke-virtual {p0, v0}, Landroid/view/View;->setBackgroundResource(I)V
 
     .line 49
-    const v0, 0x11020021
+    const v0, 0x11020023
 
     invoke-virtual {p0, v0}, Lmiui/widget/CircleProgressView;->setProgressResource(I)V
 

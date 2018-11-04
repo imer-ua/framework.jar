@@ -32,7 +32,7 @@
     .param p1, "this$1"    # Landroid/preference/MiuiHideIconAppPreference$AppListAdapter;
 
     .prologue
-    .line 462
+    .line 467
     iput-object p1, p0, Landroid/preference/MiuiHideIconAppPreference$AppListAdapter$ViewHolder;->this$1:Landroid/preference/MiuiHideIconAppPreference$AppListAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

@@ -12,7 +12,7 @@
 
 .field public static final USER_XSPACE:I = 0x3e7
 
-.field public static final XSPACE_ICON_MASK_ID:I = 0x11020066
+.field public static final XSPACE_ICON_MASK_ID:I = 0x11020068
 
 .field public static final XSPACE_SHARED_USER_GID:I
 

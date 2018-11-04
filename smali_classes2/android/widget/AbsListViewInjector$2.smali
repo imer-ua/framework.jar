@@ -27,7 +27,7 @@
     .param p1, "val$listView"    # Landroid/widget/AbsListView;
 
     .prologue
-    .line 151
+    .line 146
     iput-object p1, p0, Landroid/widget/AbsListViewInjector$2;->val$listView:Landroid/widget/AbsListView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +42,7 @@
     .param p1, "animation"    # Landroid/animation/ValueAnimator;
 
     .prologue
-    .line 154
+    .line 149
     iget-object v1, p0, Landroid/widget/AbsListViewInjector$2;->val$listView:Landroid/widget/AbsListView;
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
@@ -57,11 +57,11 @@
 
     iput v0, v1, Landroid/widget/AbsListView;->mScaleY:F
 
-    .line 155
+    .line 150
     iget-object v0, p0, Landroid/widget/AbsListViewInjector$2;->val$listView:Landroid/widget/AbsListView;
 
     invoke-virtual {v0}, Landroid/view/View;->invalidate()V
 
-    .line 153
+    .line 148
     return-void
 .end method

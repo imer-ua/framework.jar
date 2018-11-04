@@ -25,7 +25,7 @@
     .locals 0
 
     .prologue
-    .line 6702
+    .line 6756
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,7 +37,7 @@
     .param p1, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 6718
+    .line 6772
     const-string/jumbo v1, "security"
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -46,7 +46,7 @@
 
     check-cast v0, Lmiui/security/SecurityManager;
 
-    .line 6719
+    .line 6773
     .local v0, "securityManager":Lmiui/security/SecurityManager;
     invoke-virtual {v0, p1}, Lmiui/security/SecurityManager;->isAppPrivacyEnabled(Ljava/lang/String;)Z
 
@@ -62,7 +62,7 @@
     .param p2, "enabled"    # Z
 
     .prologue
-    .line 6710
+    .line 6764
     const-string/jumbo v1, "security"
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -71,10 +71,10 @@
 
     check-cast v0, Lmiui/security/SecurityManager;
 
-    .line 6711
+    .line 6765
     .local v0, "securityManager":Lmiui/security/SecurityManager;
     invoke-virtual {v0, p1, p2}, Lmiui/security/SecurityManager;->setAppPrivacyStatus(Ljava/lang/String;Z)V
 
-    .line 6709
+    .line 6763
     return-void
 .end method

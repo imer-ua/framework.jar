@@ -204,7 +204,7 @@
 
     .line 4161
     .local v6, "theme":Landroid/content/res/Resources$Theme;
-    const v7, 0x11020084
+    const v7, 0x11020086
 
     invoke-virtual {v5, v7, v6}, Landroid/content/res/Resources;->getDrawable(ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
 
@@ -218,7 +218,7 @@
 
     .line 4164
     .local v2, "header":I
-    const v7, 0x11020085
+    const v7, 0x11020087
 
     invoke-virtual {v5, v7, v6}, Landroid/content/res/Resources;->getDrawable(ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
 

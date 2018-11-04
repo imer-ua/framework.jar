@@ -15,7 +15,7 @@
 
 
 # static fields
-.field public static final activity_package_delete_confirm_title:I = 0x110900cc
+.field public static final activity_package_delete_confirm_title:I = 0x110900cd
 
 .field public static final add_frequent_phrases:I = 0x11090067
 
@@ -23,7 +23,7 @@
 
 .field public static final all_call_livetalk_remain_mins:I = 0x110900a8
 
-.field public static final always:I = 0x110900de
+.field public static final always:I = 0x110900df
 
 .field public static final alwaysUsePrompt:I = 0x11090068
 
@@ -65,9 +65,9 @@
 
 .field public static final android_force_close:I = 0x11090032
 
-.field public static final android_forward_intent_to_owner:I = 0x110900ff
+.field public static final android_forward_intent_to_owner:I = 0x11090100
 
-.field public static final android_forward_intent_to_work:I = 0x11090100
+.field public static final android_forward_intent_to_work:I = 0x11090101
 
 .field public static final android_gigabyteShort:I = 0x1109004b
 
@@ -125,23 +125,23 @@
 
 .field public static final android_whichApplication:I = 0x1109003c
 
-.field public static final android_whichApplicationNamed:I = 0x11090101
+.field public static final android_whichApplicationNamed:I = 0x11090102
 
-.field public static final android_whichEditApplication:I = 0x11090104
+.field public static final android_whichEditApplication:I = 0x11090105
 
-.field public static final android_whichEditApplicationNamed:I = 0x11090105
+.field public static final android_whichEditApplicationNamed:I = 0x11090106
 
 .field public static final android_whichHomeApplication:I = 0x1109003b
 
-.field public static final android_whichHomeApplicationNamed:I = 0x11090106
+.field public static final android_whichHomeApplicationNamed:I = 0x11090107
 
-.field public static final android_whichSendApplication:I = 0x11090107
+.field public static final android_whichSendApplication:I = 0x11090108
 
-.field public static final android_whichSendApplicationNamed:I = 0x11090108
+.field public static final android_whichSendApplicationNamed:I = 0x11090109
 
-.field public static final android_whichViewApplication:I = 0x11090102
+.field public static final android_whichViewApplication:I = 0x11090103
 
-.field public static final android_whichViewApplicationNamed:I = 0x11090103
+.field public static final android_whichViewApplicationNamed:I = 0x11090104
 
 .field public static final android_wifi_tether_configure_ssid_default:I = 0x1109004a
 
@@ -177,15 +177,15 @@
 
 .field public static final autofill:I = 0x1109006c
 
-.field public static final button_text_cancel:I = 0x110900cd
+.field public static final button_text_cancel:I = 0x110900ce
 
-.field public static final button_text_delete:I = 0x110900ce
+.field public static final button_text_delete:I = 0x110900cf
 
-.field public static final button_text_delete_timer:I = 0x110900d1
+.field public static final button_text_delete_timer:I = 0x110900d2
 
-.field public static final button_text_next_step:I = 0x110900d0
+.field public static final button_text_next_step:I = 0x110900d1
 
-.field public static final button_text_next_step_timer:I = 0x110900cf
+.field public static final button_text_next_step_timer:I = 0x110900d0
 
 .field public static final call_record_or:I = 0x11090071
 
@@ -195,11 +195,11 @@
 
 .field public static final cancel_action:I = 0x110900ab
 
-.field public static final close:I = 0x110900dd
+.field public static final close:I = 0x110900de
 
 .field public static final config_xiaoaiComponent:I = 0x1109005c
 
-.field public static final configure_input_methods:I = 0x110900e4
+.field public static final configure_input_methods:I = 0x110900e5
 
 .field public static final copy:I = 0x11090063
 
@@ -207,9 +207,9 @@
 
 .field public static final default_name:I = 0x110900b5
 
-.field public static final description_title:I = 0x110900da
+.field public static final description_title:I = 0x110900db
 
-.field public static final eighthours:I = 0x110900e2
+.field public static final eighthours:I = 0x110900e3
 
 .field public static final enable_livetalk_summary:I = 0x110900aa
 
@@ -227,7 +227,7 @@
 
 .field public static final force_exit_skip_message:I = 0x11090075
 
-.field public static final fourhours:I = 0x110900e1
+.field public static final fourhours:I = 0x110900e2
 
 .field public static final fp_nav_center_action_choose_dlg_msg:I = 0x110900b8
 
@@ -287,33 +287,33 @@
 
 .field public static final miui:I = 0x1109005d
 
-.field public static final miui_forbid_poweroff_when_device_locked:I = 0x110900ee
+.field public static final miui_forbid_poweroff_when_device_locked:I = 0x110900ef
 
-.field public static final miui_screen_ratio_hint:I = 0x110900e6
+.field public static final miui_screen_ratio_hint:I = 0x110900e7
 
-.field public static final miui_screen_ratio_hint_dont_show_again:I = 0x110900e8
+.field public static final miui_screen_ratio_hint_dont_show_again:I = 0x110900e9
 
-.field public static final miui_screen_ratio_hint_go_to_settings:I = 0x110900ea
+.field public static final miui_screen_ratio_hint_go_to_settings:I = 0x110900eb
 
-.field public static final miui_screen_ratio_hint_message:I = 0x110900e7
+.field public static final miui_screen_ratio_hint_message:I = 0x110900e8
 
-.field public static final miui_screen_ratio_hint_ok:I = 0x110900e9
+.field public static final miui_screen_ratio_hint_ok:I = 0x110900ea
 
-.field public static final miui_upgrading_notification_title:I = 0x110900e5
+.field public static final miui_upgrading_notification_title:I = 0x110900e6
 
-.field public static final miui_warning_button_cancel:I = 0x110900fa
+.field public static final miui_warning_button_cancel:I = 0x110900fb
 
-.field public static final miui_warning_button_ok:I = 0x110900f9
+.field public static final miui_warning_button_ok:I = 0x110900fa
 
-.field public static final miui_warning_tip_info:I = 0x110900fb
+.field public static final miui_warning_tip_info:I = 0x110900fc
 
-.field public static final onehour:I = 0x110900df
+.field public static final onehour:I = 0x110900e0
 
-.field public static final package_delete_confirm_step_1:I = 0x110900d2
+.field public static final package_delete_confirm_step_1:I = 0x110900d3
 
-.field public static final package_delete_confirm_step_2:I = 0x110900d3
+.field public static final package_delete_confirm_step_2:I = 0x110900d4
 
-.field public static final package_delete_confirm_step_3:I = 0x110900d4
+.field public static final package_delete_confirm_step_3:I = 0x110900d5
 
 .field public static final paste:I = 0x11090064
 
@@ -333,13 +333,13 @@
 
 .field public static final reboot_progress:I = 0x11090088
 
-.field public static final remain:I = 0x110900e3
+.field public static final remain:I = 0x110900e4
 
 .field public static final replace:I = 0x11090065
 
-.field public static final resolver_app_recommend_flag:I = 0x110900f3
+.field public static final resolver_app_recommend_flag:I = 0x110900f4
 
-.field public static final resolver_recommended_app_name:I = 0x110900f2
+.field public static final resolver_recommended_app_name:I = 0x110900f3
 
 .field public static final resource_select:I = 0x110900b6
 
@@ -373,6 +373,8 @@
 
 .field public static final security_permission_network_failed_text:I = 0x110900c9
 
+.field public static final security_permission_open_wifi_settings:I = 0x110900ca
+
 .field public static final security_permission_validate_warning:I = 0x110900c7
 
 .field public static final security_permission_wifi_and_data_opened_text:I = 0x110900c8
@@ -393,7 +395,7 @@
 
 .field public static final shutdown_progress:I = 0x11090086
 
-.field public static final silence_mode:I = 0x110900d5
+.field public static final silence_mode:I = 0x110900d6
 
 .field public static final sim_added_reboot_confirm:I = 0x11090091
 
@@ -403,11 +405,11 @@
 
 .field public static final softap_notifif_title:I = 0x11090092
 
-.field public static final standard:I = 0x110900d6
+.field public static final standard:I = 0x110900d7
 
-.field public static final standard_description:I = 0x110900db
+.field public static final standard_description:I = 0x110900dc
 
-.field public static final standard_title:I = 0x110900d8
+.field public static final standard_title:I = 0x110900d9
 
 .field public static final start_security_permission_verify_text:I = 0x110900c3
 
@@ -495,23 +497,23 @@
 
 .field public static final subinfo_default_name:I = 0x110900b2
 
-.field public static final super_resolution_maintain_tips:I = 0x110900ef
+.field public static final super_resolution_maintain_tips:I = 0x110900f0
 
-.field public static final switch_brand_desc_tv:I = 0x110900ed
+.field public static final switch_brand_desc_tv:I = 0x110900ee
 
-.field public static final switch_desc_tv:I = 0x110900ec
+.field public static final switch_desc_tv:I = 0x110900ed
 
-.field public static final switching_tv:I = 0x110900eb
+.field public static final switching_tv:I = 0x110900ec
 
-.field public static final talk_back_water_mark_string1:I = 0x110900fc
+.field public static final talk_back_water_mark_string1:I = 0x110900fd
 
-.field public static final talk_back_water_mark_string2:I = 0x110900fd
+.field public static final talk_back_water_mark_string2:I = 0x110900fe
 
-.field public static final total:I = 0x110900d7
+.field public static final total:I = 0x110900d8
 
-.field public static final total_description:I = 0x110900dc
+.field public static final total_description:I = 0x110900dd
 
-.field public static final total_title:I = 0x110900d9
+.field public static final total_title:I = 0x110900da
 
 .field public static final translation_more:I = 0x1109006b
 
@@ -521,27 +523,27 @@
 
 .field public static final turn_off:I = 0x11090094
 
-.field public static final twohours:I = 0x110900e0
+.field public static final twohours:I = 0x110900e1
 
 .field public static final unknown_caller:I = 0x11090095
 
-.field public static final user_switching_dialog_text:I = 0x110900cb
+.field public static final user_switching_dialog_text:I = 0x110900cc
 
-.field public static final voice_begin:I = 0x110900f6
+.field public static final voice_begin:I = 0x110900f7
 
-.field public static final voice_button_action_down:I = 0x110900f5
+.field public static final voice_button_action_down:I = 0x110900f6
 
-.field public static final voice_button_action_up:I = 0x110900f4
+.field public static final voice_button_action_up:I = 0x110900f5
 
-.field public static final voice_input_error_network:I = 0x110900f7
+.field public static final voice_input_error_network:I = 0x110900f8
 
-.field public static final voice_input_error_other:I = 0x110900f8
+.field public static final voice_input_error_other:I = 0x110900f9
 
-.field public static final wifi_assistant_wifi_no_internet:I = 0x110900f0
+.field public static final wifi_assistant_wifi_no_internet:I = 0x110900f1
 
-.field public static final wifi_assistant_wifi_no_internet_detail:I = 0x110900f1
+.field public static final wifi_assistant_wifi_no_internet_detail:I = 0x110900f2
 
-.field public static final xspace_resolver_activity_title:I = 0x110900ca
+.field public static final xspace_resolver_activity_title:I = 0x110900cb
 
 
 # direct methods

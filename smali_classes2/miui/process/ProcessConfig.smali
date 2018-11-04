@@ -128,21 +128,23 @@
     .end annotation
 .end field
 
+.field private mkillingClockTime:J
+
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
     .prologue
-    .line 337
+    .line 346
     new-instance v0, Lmiui/process/ProcessConfig$1;
 
     invoke-direct {v0}, Lmiui/process/ProcessConfig$1;-><init>()V
 
-    .line 336
+    .line 345
     sput-object v0, Lmiui/process/ProcessConfig;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 14
+    .line 16
     return-void
 .end method
 
@@ -155,25 +157,25 @@
 
     const/16 v0, -0x2710
 
-    .line 107
+    .line 112
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 73
+    .line 75
     iput v0, p0, Lmiui/process/ProcessConfig;->mUserId:I
 
-    .line 76
+    .line 78
     iput v1, p0, Lmiui/process/ProcessConfig;->mTaskId:I
 
-    .line 79
+    .line 81
     iput v1, p0, Lmiui/process/ProcessConfig;->mUid:I
 
-    .line 82
+    .line 84
     iput v0, p0, Lmiui/process/ProcessConfig;->mPriority:I
 
-    .line 108
+    .line 113
     iput p1, p0, Lmiui/process/ProcessConfig;->mPolicy:I
 
-    .line 107
+    .line 112
     return-void
 .end method
 
@@ -195,17 +197,17 @@
     .end annotation
 
     .prologue
-    .line 156
+    .line 161
     .local p3, "killingPackageMaps":Landroid/util/ArrayMap;, "Landroid/util/ArrayMap<Ljava/lang/Integer;Ljava/util/List<Ljava/lang/String;>;>;"
     invoke-direct {p0, p1}, Lmiui/process/ProcessConfig;-><init>(I)V
 
-    .line 157
+    .line 162
     iput p2, p0, Lmiui/process/ProcessConfig;->mUserId:I
 
-    .line 158
+    .line 163
     iput-object p3, p0, Lmiui/process/ProcessConfig;->mKillingPackageMaps:Landroid/util/ArrayMap;
 
-    .line 155
+    .line 160
     return-void
 .end method
 
@@ -230,14 +232,14 @@
     .end annotation
 
     .prologue
-    .line 176
+    .line 181
     .local p3, "killingPackageMaps":Landroid/util/ArrayMap;, "Landroid/util/ArrayMap<Ljava/lang/Integer;Ljava/util/List<Ljava/lang/String;>;>;"
     invoke-direct {p0, p1, p2, p3}, Lmiui/process/ProcessConfig;-><init>(IILandroid/util/ArrayMap;)V
 
-    .line 177
+    .line 182
     iput-object p4, p0, Lmiui/process/ProcessConfig;->mReason:Ljava/lang/String;
 
-    .line 175
+    .line 180
     return-void
 .end method
 
@@ -248,16 +250,16 @@
     .param p3, "uid"    # I
 
     .prologue
-    .line 122
+    .line 127
     invoke-direct {p0, p1}, Lmiui/process/ProcessConfig;-><init>(I)V
 
-    .line 123
+    .line 128
     iput-object p2, p0, Lmiui/process/ProcessConfig;->mKillingPackage:Ljava/lang/String;
 
-    .line 124
+    .line 129
     iput p3, p0, Lmiui/process/ProcessConfig;->mUid:I
 
-    .line 121
+    .line 126
     return-void
 .end method
 
@@ -269,19 +271,19 @@
     .param p4, "taskId"    # I
 
     .prologue
-    .line 136
+    .line 141
     invoke-direct {p0, p1}, Lmiui/process/ProcessConfig;-><init>(I)V
 
-    .line 137
+    .line 142
     iput-object p2, p0, Lmiui/process/ProcessConfig;->mKillingPackage:Ljava/lang/String;
 
-    .line 138
+    .line 143
     iput p3, p0, Lmiui/process/ProcessConfig;->mUserId:I
 
-    .line 139
+    .line 144
     iput p4, p0, Lmiui/process/ProcessConfig;->mTaskId:I
 
-    .line 135
+    .line 140
     return-void
 .end method
 
@@ -294,25 +296,25 @@
 
     const/16 v0, -0x2710
 
-    .line 348
+    .line 357
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 73
+    .line 75
     iput v0, p0, Lmiui/process/ProcessConfig;->mUserId:I
 
-    .line 76
+    .line 78
     iput v1, p0, Lmiui/process/ProcessConfig;->mTaskId:I
 
-    .line 79
+    .line 81
     iput v1, p0, Lmiui/process/ProcessConfig;->mUid:I
 
-    .line 82
+    .line 84
     iput v0, p0, Lmiui/process/ProcessConfig;->mPriority:I
 
-    .line 349
+    .line 358
     invoke-virtual {p0, p1}, Lmiui/process/ProcessConfig;->readFromParcel(Landroid/os/Parcel;)V
 
-    .line 348
+    .line 357
     return-void
 .end method
 
@@ -332,7 +334,7 @@
     .locals 1
 
     .prologue
-    .line 266
+    .line 275
     const/4 v0, 0x0
 
     return v0
@@ -342,7 +344,7 @@
     .locals 1
 
     .prologue
-    .line 189
+    .line 194
     iget-object v0, p0, Lmiui/process/ProcessConfig;->mKillingPackage:Ljava/lang/String;
 
     return-object v0
@@ -364,7 +366,7 @@
     .end annotation
 
     .prologue
-    .line 225
+    .line 230
     iget-object v0, p0, Lmiui/process/ProcessConfig;->mKillingPackageMaps:Landroid/util/ArrayMap;
 
     return-object v0
@@ -374,7 +376,7 @@
     .locals 1
 
     .prologue
-    .line 181
+    .line 186
     iget v0, p0, Lmiui/process/ProcessConfig;->mPolicy:I
 
     return v0
@@ -384,7 +386,7 @@
     .locals 1
 
     .prologue
-    .line 209
+    .line 214
     iget v0, p0, Lmiui/process/ProcessConfig;->mPriority:I
 
     return v0
@@ -394,7 +396,7 @@
     .locals 1
 
     .prologue
-    .line 193
+    .line 198
     iget-object v0, p0, Lmiui/process/ProcessConfig;->mReason:Ljava/lang/String;
 
     return-object v0
@@ -413,7 +415,7 @@
     .end annotation
 
     .prologue
-    .line 221
+    .line 226
     iget-object v0, p0, Lmiui/process/ProcessConfig;->mRemovingTaskIdList:Ljava/util/List;
 
     return-object v0
@@ -423,7 +425,7 @@
     .locals 1
 
     .prologue
-    .line 205
+    .line 210
     iget v0, p0, Lmiui/process/ProcessConfig;->mTaskId:I
 
     return v0
@@ -433,7 +435,7 @@
     .locals 1
 
     .prologue
-    .line 201
+    .line 206
     iget v0, p0, Lmiui/process/ProcessConfig;->mUid:I
 
     return v0
@@ -443,7 +445,7 @@
     .locals 1
 
     .prologue
-    .line 197
+    .line 202
     iget v0, p0, Lmiui/process/ProcessConfig;->mUserId:I
 
     return v0
@@ -462,7 +464,7 @@
     .end annotation
 
     .prologue
-    .line 185
+    .line 190
     iget-object v0, p0, Lmiui/process/ProcessConfig;->mWhiteList:Ljava/util/List;
 
     return-object v0
@@ -472,7 +474,7 @@
     .locals 2
 
     .prologue
-    .line 365
+    .line 374
     iget v0, p0, Lmiui/process/ProcessConfig;->mPriority:I
 
     const/16 v1, -0x2710
@@ -494,7 +496,7 @@
     .locals 1
 
     .prologue
-    .line 213
+    .line 218
     iget-boolean v0, p0, Lmiui/process/ProcessConfig;->mRemoveTaskNeeded:Z
 
     return v0
@@ -504,7 +506,7 @@
     .locals 2
 
     .prologue
-    .line 357
+    .line 366
     iget v0, p0, Lmiui/process/ProcessConfig;->mTaskId:I
 
     const/4 v1, -0x1
@@ -526,7 +528,7 @@
     .locals 2
 
     .prologue
-    .line 361
+    .line 370
     iget v0, p0, Lmiui/process/ProcessConfig;->mUid:I
 
     const/4 v1, -0x1
@@ -548,7 +550,7 @@
     .locals 2
 
     .prologue
-    .line 353
+    .line 362
     iget v0, p0, Lmiui/process/ProcessConfig;->mUserId:I
 
     const/16 v1, -0x2710
@@ -573,56 +575,56 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 309
+    .line 318
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
     iput v3, p0, Lmiui/process/ProcessConfig;->mPolicy:I
 
-    .line 310
+    .line 319
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
     iput-object v3, p0, Lmiui/process/ProcessConfig;->mReason:Ljava/lang/String;
 
-    .line 311
+    .line 320
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
     iput-object v3, p0, Lmiui/process/ProcessConfig;->mKillingPackage:Ljava/lang/String;
 
-    .line 312
+    .line 321
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
     iput v3, p0, Lmiui/process/ProcessConfig;->mUserId:I
 
-    .line 313
+    .line 322
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
     iput v3, p0, Lmiui/process/ProcessConfig;->mTaskId:I
 
-    .line 314
+    .line 323
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
     iput v3, p0, Lmiui/process/ProcessConfig;->mUid:I
 
-    .line 315
+    .line 324
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
     iput v3, p0, Lmiui/process/ProcessConfig;->mPriority:I
 
-    .line 316
+    .line 325
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
@@ -634,14 +636,14 @@
     :cond_0
     iput-boolean v2, p0, Lmiui/process/ProcessConfig;->mRemoveTaskNeeded:Z
 
-    .line 318
+    .line 327
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 319
+    .line 328
     const-class v2, Ljava/util/List;
 
     invoke-virtual {v2}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -654,7 +656,7 @@
 
     iput-object v2, p0, Lmiui/process/ProcessConfig;->mWhiteList:Ljava/util/List;
 
-    .line 322
+    .line 331
     :cond_1
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
@@ -662,7 +664,7 @@
 
     if-eqz v2, :cond_2
 
-    .line 323
+    .line 332
     const-class v2, Ljava/util/List;
 
     invoke-virtual {v2}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -675,7 +677,7 @@
 
     iput-object v2, p0, Lmiui/process/ProcessConfig;->mRemovingTaskIdList:Ljava/util/List;
 
-    .line 326
+    .line 335
     :cond_2
     :goto_0
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -684,7 +686,7 @@
 
     if-eqz v2, :cond_4
 
-    .line 327
+    .line 336
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
@@ -693,7 +695,7 @@
 
     move-result-object v0
 
-    .line 328
+    .line 337
     .local v0, "level":Ljava/lang/Integer;
     const-class v2, Ljava/util/List;
 
@@ -705,20 +707,20 @@
 
     move-result-object v1
 
-    .line 329
+    .line 338
     .local v1, "packages":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     iget-object v2, p0, Lmiui/process/ProcessConfig;->mKillingPackageMaps:Landroid/util/ArrayMap;
 
     if-nez v2, :cond_3
 
-    .line 330
+    .line 339
     new-instance v2, Landroid/util/ArrayMap;
 
     invoke-direct {v2}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v2, p0, Lmiui/process/ProcessConfig;->mKillingPackageMaps:Landroid/util/ArrayMap;
 
-    .line 332
+    .line 341
     :cond_3
     iget-object v2, p0, Lmiui/process/ProcessConfig;->mKillingPackageMaps:Landroid/util/ArrayMap;
 
@@ -726,10 +728,22 @@
 
     goto :goto_0
 
-    .line 308
+    .line 317
     .end local v0    # "level":Ljava/lang/Integer;
     .end local v1    # "packages":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :cond_4
+    return-void
+.end method
+
+.method public setKillingClockTime(J)V
+    .locals 1
+    .param p1, "killingClockTime"    # J
+
+    .prologue
+    .line 270
+    iput-wide p1, p0, Lmiui/process/ProcessConfig;->mkillingClockTime:J
+
+    .line 269
     return-void
 .end method
 
@@ -738,10 +752,10 @@
     .param p1, "killingPackage"    # Ljava/lang/String;
 
     .prologue
-    .line 233
+    .line 238
     iput-object p1, p0, Lmiui/process/ProcessConfig;->mKillingPackage:Ljava/lang/String;
 
-    .line 232
+    .line 237
     return-void
 .end method
 
@@ -761,11 +775,11 @@
     .end annotation
 
     .prologue
-    .line 237
+    .line 242
     .local p1, "killingPackageMaps":Landroid/util/ArrayMap;, "Landroid/util/ArrayMap<Ljava/lang/Integer;Ljava/util/List<Ljava/lang/String;>;>;"
     iput-object p1, p0, Lmiui/process/ProcessConfig;->mKillingPackageMaps:Landroid/util/ArrayMap;
 
-    .line 236
+    .line 241
     return-void
 .end method
 
@@ -774,10 +788,10 @@
     .param p1, "priority"    # I
 
     .prologue
-    .line 257
+    .line 262
     iput p1, p0, Lmiui/process/ProcessConfig;->mPriority:I
 
-    .line 256
+    .line 261
     return-void
 .end method
 
@@ -786,10 +800,10 @@
     .param p1, "reason"    # Ljava/lang/String;
 
     .prologue
-    .line 241
+    .line 246
     iput-object p1, p0, Lmiui/process/ProcessConfig;->mReason:Ljava/lang/String;
 
-    .line 240
+    .line 245
     return-void
 .end method
 
@@ -798,10 +812,10 @@
     .param p1, "removeTaskNeeded"    # Z
 
     .prologue
-    .line 261
+    .line 266
     iput-boolean p1, p0, Lmiui/process/ProcessConfig;->mRemoveTaskNeeded:Z
 
-    .line 260
+    .line 265
     return-void
 .end method
 
@@ -818,11 +832,11 @@
     .end annotation
 
     .prologue
-    .line 217
+    .line 222
     .local p1, "taskIdList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     iput-object p1, p0, Lmiui/process/ProcessConfig;->mRemovingTaskIdList:Ljava/util/List;
 
-    .line 216
+    .line 221
     return-void
 .end method
 
@@ -831,10 +845,10 @@
     .param p1, "taskId"    # I
 
     .prologue
-    .line 253
+    .line 258
     iput p1, p0, Lmiui/process/ProcessConfig;->mTaskId:I
 
-    .line 252
+    .line 257
     return-void
 .end method
 
@@ -843,10 +857,10 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 249
+    .line 254
     iput p1, p0, Lmiui/process/ProcessConfig;->mUid:I
 
-    .line 248
+    .line 253
     return-void
 .end method
 
@@ -855,10 +869,10 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 245
+    .line 250
     iput p1, p0, Lmiui/process/ProcessConfig;->mUserId:I
 
-    .line 244
+    .line 249
     return-void
 .end method
 
@@ -875,12 +889,252 @@
     .end annotation
 
     .prologue
-    .line 229
+    .line 234
     .local p1, "whiteList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     iput-object p1, p0, Lmiui/process/ProcessConfig;->mWhiteList:Ljava/util/List;
 
-    .line 228
+    .line 233
     return-void
+.end method
+
+.method public toString()Ljava/lang/String;
+    .locals 6
+
+    .prologue
+    const/16 v3, 0x27
+
+    .line 379
+    new-instance v0, Ljava/text/SimpleDateFormat;
+
+    const-string/jumbo v1, "yyyy-MM-dd HH:mm:ss"
+
+    invoke-direct {v0, v1}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
+
+    .line 380
+    .local v0, "sdf":Ljava/text/SimpleDateFormat;
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v2, "ProcessConfig{mPolicy="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    .line 381
+    iget v2, p0, Lmiui/process/ProcessConfig;->mPolicy:I
+
+    .line 380
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    .line 382
+    const-string/jumbo v2, ", mReason=\'"
+
+    .line 380
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    .line 382
+    iget-object v2, p0, Lmiui/process/ProcessConfig;->mReason:Ljava/lang/String;
+
+    .line 380
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    .line 383
+    const-string/jumbo v2, ", mKillingPackage=\'"
+
+    .line 380
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    .line 383
+    iget-object v2, p0, Lmiui/process/ProcessConfig;->mKillingPackage:Ljava/lang/String;
+
+    .line 380
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    .line 384
+    const-string/jumbo v2, ", mUserId="
+
+    .line 380
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    .line 384
+    iget v2, p0, Lmiui/process/ProcessConfig;->mUserId:I
+
+    .line 380
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    .line 385
+    const-string/jumbo v2, ", mTaskId="
+
+    .line 380
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    .line 385
+    iget v2, p0, Lmiui/process/ProcessConfig;->mTaskId:I
+
+    .line 380
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    .line 386
+    const-string/jumbo v2, ", mUid="
+
+    .line 380
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    .line 386
+    iget v2, p0, Lmiui/process/ProcessConfig;->mUid:I
+
+    .line 380
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    .line 387
+    const-string/jumbo v2, ", mPriority="
+
+    .line 380
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    .line 387
+    iget v2, p0, Lmiui/process/ProcessConfig;->mPriority:I
+
+    .line 380
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    .line 388
+    const-string/jumbo v2, ", mWhiteList="
+
+    .line 380
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    .line 388
+    iget-object v2, p0, Lmiui/process/ProcessConfig;->mWhiteList:Ljava/util/List;
+
+    .line 380
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    .line 389
+    const-string/jumbo v2, ", mKillingPackageMaps="
+
+    .line 380
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    .line 389
+    iget-object v2, p0, Lmiui/process/ProcessConfig;->mKillingPackageMaps:Landroid/util/ArrayMap;
+
+    .line 380
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    .line 390
+    const-string/jumbo v2, ", mRemoveTaskNeeded="
+
+    .line 380
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    .line 390
+    iget-boolean v2, p0, Lmiui/process/ProcessConfig;->mRemoveTaskNeeded:Z
+
+    .line 380
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    .line 391
+    const-string/jumbo v2, ", mRemovingTaskIdList="
+
+    .line 380
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    .line 391
+    iget-object v2, p0, Lmiui/process/ProcessConfig;->mRemovingTaskIdList:Ljava/util/List;
+
+    .line 380
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    .line 392
+    const-string/jumbo v2, ", mkillingClockTime="
+
+    .line 380
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    .line 392
+    new-instance v2, Ljava/util/Date;
+
+    iget-wide v4, p0, Lmiui/process/ProcessConfig;->mkillingClockTime:J
+
+    invoke-direct {v2, v4, v5}, Ljava/util/Date;-><init>(J)V
+
+    invoke-virtual {v0, v2}, Ljava/text/DateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 380
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    .line 393
+    const/16 v2, 0x7d
+
+    .line 380
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    return-object v1
 .end method
 
 .method public writeToParcel(Landroid/os/Parcel;I)V
@@ -893,42 +1147,42 @@
 
     const/4 v5, 0x0
 
-    .line 271
+    .line 280
     iget v3, p0, Lmiui/process/ProcessConfig;->mPolicy:I
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 272
+    .line 281
     iget-object v3, p0, Lmiui/process/ProcessConfig;->mReason:Ljava/lang/String;
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 273
+    .line 282
     iget-object v3, p0, Lmiui/process/ProcessConfig;->mKillingPackage:Ljava/lang/String;
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 274
+    .line 283
     iget v3, p0, Lmiui/process/ProcessConfig;->mUserId:I
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 275
+    .line 284
     iget v3, p0, Lmiui/process/ProcessConfig;->mTaskId:I
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 276
+    .line 285
     iget v3, p0, Lmiui/process/ProcessConfig;->mUid:I
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 277
+    .line 286
     iget v3, p0, Lmiui/process/ProcessConfig;->mPriority:I
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 278
+    .line 287
     iget-boolean v3, p0, Lmiui/process/ProcessConfig;->mRemoveTaskNeeded:Z
 
     if-eqz v3, :cond_1
@@ -938,40 +1192,40 @@
     :goto_0
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 280
+    .line 289
     iget-object v3, p0, Lmiui/process/ProcessConfig;->mWhiteList:Ljava/util/List;
 
     if-eqz v3, :cond_2
 
-    .line 281
+    .line 290
     invoke-virtual {p1, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 282
+    .line 291
     iget-object v3, p0, Lmiui/process/ProcessConfig;->mWhiteList:Ljava/util/List;
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeList(Ljava/util/List;)V
 
-    .line 287
+    .line 296
     :goto_1
     iget-object v3, p0, Lmiui/process/ProcessConfig;->mRemovingTaskIdList:Ljava/util/List;
 
     if-eqz v3, :cond_3
 
-    .line 288
+    .line 297
     invoke-virtual {p1, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 289
+    .line 298
     iget-object v3, p0, Lmiui/process/ProcessConfig;->mRemovingTaskIdList:Ljava/util/List;
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeList(Ljava/util/List;)V
 
-    .line 294
+    .line 303
     :goto_2
     iget-object v3, p0, Lmiui/process/ProcessConfig;->mKillingPackageMaps:Landroid/util/ArrayMap;
 
     if-eqz v3, :cond_4
 
-    .line 295
+    .line 304
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -984,7 +1238,7 @@
 
     if-ge v0, v3, :cond_4
 
-    .line 296
+    .line 305
     iget-object v3, p0, Lmiui/process/ProcessConfig;->mKillingPackageMaps:Landroid/util/ArrayMap;
 
     invoke-virtual {v3, v0}, Landroid/util/ArrayMap;->keyAt(I)Ljava/lang/Object;
@@ -993,7 +1247,7 @@
 
     check-cast v1, Ljava/lang/Integer;
 
-    .line 297
+    .line 306
     .local v1, "level":Ljava/lang/Integer;
     iget-object v3, p0, Lmiui/process/ProcessConfig;->mKillingPackageMaps:Landroid/util/ArrayMap;
 
@@ -1003,24 +1257,24 @@
 
     check-cast v2, Ljava/util/List;
 
-    .line 298
+    .line 307
     .local v2, "packages":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     if-eqz v2, :cond_0
 
-    .line 299
+    .line 308
     invoke-virtual {p1, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 300
+    .line 309
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
     move-result v3
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 301
+    .line 310
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeList(Ljava/util/List;)V
 
-    .line 295
+    .line 304
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
@@ -1032,25 +1286,25 @@
     :cond_1
     move v3, v5
 
-    .line 278
+    .line 287
     goto :goto_0
 
-    .line 284
+    .line 293
     :cond_2
     invoke-virtual {p1, v5}, Landroid/os/Parcel;->writeInt(I)V
 
     goto :goto_1
 
-    .line 291
+    .line 300
     :cond_3
     invoke-virtual {p1, v5}, Landroid/os/Parcel;->writeInt(I)V
 
     goto :goto_2
 
-    .line 305
+    .line 314
     :cond_4
     invoke-virtual {p1, v5}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 270
+    .line 279
     return-void
 .end method

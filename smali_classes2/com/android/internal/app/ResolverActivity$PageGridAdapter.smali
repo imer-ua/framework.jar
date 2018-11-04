@@ -147,7 +147,7 @@
 
     iget-object v5, p0, Lcom/android/internal/app/ResolverActivity$PageGridAdapter;->this$0:Lcom/android/internal/app/ResolverActivity;
 
-    const v6, 0x110900f3
+    const v6, 0x110900f4
 
     invoke-virtual {v5, v6}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -158,7 +158,7 @@
     aput-object v5, v4, v6
 
     .line 1972
-    const v5, 0x110900f2
+    const v5, 0x110900f3
 
     invoke-virtual {v3, v5, v4}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 

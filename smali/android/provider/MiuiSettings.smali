@@ -255,57 +255,57 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 5712
+    .line 5766
     const-string/jumbo v2, "ui_mode_scale"
 
     invoke-static {p0, v2, v0}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result v1
 
-    .line 5713
+    .line 5767
     .local v1, "scaleMode":I
     and-int/lit8 v1, v1, 0xf
 
-    .line 5715
+    .line 5769
     const/16 v2, 0xc
 
     if-eq v1, v2, :cond_0
 
-    .line 5716
+    .line 5770
     const/16 v2, 0xd
 
     if-ne v1, v2, :cond_2
 
-    .line 5720
+    .line 5774
     .local v0, "isLargeUiMode":Z
     :cond_0
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 5721
+    .line 5775
     invoke-static {v1}, Landroid/content/res/MiuiConfiguration;->getFontScale(I)F
 
     move-result v2
 
     iput v2, p1, Landroid/content/res/Configuration;->fontScale:F
 
-    .line 5711
+    .line 5765
     :cond_1
     return-void
 
-    .line 5717
+    .line 5771
     .end local v0    # "isLargeUiMode":Z
     :cond_2
     const/16 v2, 0xe
 
     if-eq v1, v2, :cond_0
 
-    .line 5718
+    .line 5772
     const/16 v2, 0xf
 
     if-eq v1, v2, :cond_0
 
-    .line 5719
+    .line 5773
     const/16 v2, 0xb
 
     if-eq v1, v2, :cond_0
